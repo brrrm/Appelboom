@@ -7,7 +7,6 @@ sites/*/files
 sites/*/private
 
 # Ignore default text files
-/*/robots.txt
 /*/CHANGELOG.txt
 /*/COPYRIGHT.txt
 /*/INSTALL*.txt
@@ -16,42 +15,42 @@ sites/*/private
 /*/UPGRADE.txt
 /*/README.txt
 /*/README.md
-/*/sites/README.txt
-/*/sites/all/modules/README.txt
-/*/sites/all/themes/README.txt
+/web/sites/README.txt
+/web/sites/all/modules/README.txt
+/web/sites/all/themes/README.txt
 
 # Ignore everything but the "sites" folder ( for non core developer )
 vendor
 recipes
 launch-drupal-cms.sh
 README.md
-/*/libraries
-/*/themes/contrib
+/web/libraries
 /drush/drush.yml
-/*/.htaccess
-/*/web.config
-/*/authorize.php
-/*/autoload.php
-/*/cron.php
-/*/example.*
-/*/.*lint*
-/*/index.php
-/*/install.php
-/*/update.php
-/*/xmlrpc.php
-/*/core
-/*/includes
-/*/misc
-/*/modules/README.txt
-/*/modules/contrib
-/*/profiles
-/*/scripts
-# /*/themes
-/*/themes/README.txt
-/*/sites/example.*
-/*/sites/development.*
-/*/sites/**/*.local.*
-/*/sites/**/default.*.*
+/web/.htaccess
+/web/web.config
+/web/authorize.php
+/web/autoload.php
+/web/cron.php
+/web/example.*
+/web/.*lint*
+/web/index.php
+/web/install.php
+/web/update.php
+/web/xmlrpc.php
+/web/core
+/web/includes
+/web/misc
+/web/modules/README.txt
+/web/modules/contrib
+/web/profiles
+/web/scripts
+# /web/themes
+/web/themes/README.txt
+/web/themes/contrib
+/web/sites/example.*
+/web/sites/development.*
+/web/sites/**/*.local.*
+/web/sites/**/default.*.*
 .ddev/
 
 ### OSX template
