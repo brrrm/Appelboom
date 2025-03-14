@@ -34,6 +34,20 @@ class FeaturedImageBlock extends BlockBase{
 			$request = \Drupal::request();
 			$route_match = \Drupal::routeMatch();
 			$title = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
+			$title = [
+				'#prefix'	=> '<div class="title-subtitle">',
+				'#markup'	=> sprintf('<h1 id="header-page-title" class="page__title title">%s</h1>', $title),
+				'#suffix'	=> '</div>',
+			];
+		}
+
+		if($node && $node->hasField('field_subtitle') && !$node->get('field_subtitle')->isEmpty()){
+			$display_options = [
+				'label' => 'hidden',
+				'type' => 'string',
+			];
+			$subtitle = $node->get('field_subtitle')->value;
+			$title['#suffix'] = sprintf('<p class="subtitle"><em>%s</em></p></div>', $subtitle);
 		}
 
 		if($node && $node->hasField('field_services') && !$node->get('field_services')->isEmpty()){
@@ -52,7 +66,7 @@ class FeaturedImageBlock extends BlockBase{
 				'label' => 'above',
 				'type' => 'entity_reference_entity_view',
 				'settings' => [
-					'view_mode' => 'icon_link',
+					'view_mode' => 'card',
 				],
 			];
 			$consultant = $node->get('field_lead_consultant')->view($display_options);
@@ -74,10 +88,8 @@ class FeaturedImageBlock extends BlockBase{
 			'main'			=> [
 				'#prefix'		=> '<div class="main">',
 				'#suffix'		=> '</div>',
-				'title'	=> [
-					'#markup'	=> sprintf('<h1 id="header-page-title" class="page__title title">%s</h1>', $title)
-				],
-				'image'	=> $image,
+				'title'			=> $title,
+				'image'			=> $image ?? null,
 			],
 			'sidebar'		=> [
 				'#prefix'		=> '<div class="sidebar">',

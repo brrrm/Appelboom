@@ -1,0 +1,48 @@
+*{
+	box-sizing: border-box;
+}
+
+h2{
+	font-size: 1.5em;
+	font-weight: 500;
+	margin: 1rem 0;
+}
+h3{
+	font-size: 1.333em;
+	font-weight: 500;
+	margin: 1rem 0;
+}
+h4{
+	font-size: 1.333em;
+	font-weight: 400;
+	text-transform: uppercase;
+	margin: 1rem 0 0;
+}
+
+figure{
+	margin: 0;
+	padding: 0;
+	display: block;
+}
+img{
+	max-width: 100%;
+	height: auto;
+}
+main img{
+	display: block;
+}
+
+a:link,
+a:visited{
+	color: var(--appelboom-red);
+	text-decoration: none;
+}
+a:hover,
+a:focus{
+	text-decoration: underline;
+	outline: none;
+}
+a:active{
+	background: var(--appelboom-red-10pct);
+	outline: none;
+}

@@ -2,6 +2,7 @@
 	display: flex;
 	gap: 0;
 	align-items: flex-start;
+	margin: 0 0 4em 0;
 }
 #block-appelboom-featuredimageforappelboom .main{
 	flex: 60% 0 0;
@@ -14,13 +15,27 @@
 	top: 0;
 	padding: 2em;
 }
-#block-appelboom-featuredimageforappelboom .main #header-page-title{
+#block-appelboom-featuredimageforappelboom .main .title-subtitle{
 	position: sticky;
 	top: 80vh;
 	z-index: 2;
-	color: #fff;
-	text-shadow: 1px 1px 3px rgba(0,0,0,0.2) ;
 	margin: 2em 2em 2em calc(( (100% * (5/3)) - var(--page-width)) / 2);
+	line-height: 1;
+}
+#block-appelboom-featuredimageforappelboom .main .title-subtitle h1#header-page-title{
+	color: #fff;
+	text-shadow: 2px 2px 7px rgba(0,0,0,0.4);
+	margin: 0;
+	font-weight: 600;
+	font-size: 3.333em;
+}
+#block-appelboom-featuredimageforappelboom .main .title-subtitle .subtitle{
+	font-style: italic;
+	font-weight: 300;
+	font-size: 2.444em;
+	color: #fff;
+	text-shadow: 2px 2px 7px rgba(0,0,0,0.4);
+	margin: 0.3em 0 0 0;
 }
 #block-appelboom-featuredimageforappelboom .main .media{
 	position: absolute;
@@ -34,4 +49,41 @@
 	min-height: 120vh;
 	width: 100%;
 	object-fit: cover;
+}
+#block-appelboom-featuredimageforappelboom .sidebar > .field{
+	margin: 2em 0 3em;
+}
+
+#block-appelboom-featuredimageforappelboom .sidebar h2.field__label:after{
+}
+#block-appelboom-featuredimageforappelboom .sidebar .field ul.field__items{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#block-appelboom-featuredimageforappelboom .sidebar .field ul.field__items > li{
+	margin: 1em 0;
+	padding: 0;
+}
+
+
+
+#block-appelboom-primary-local-tasks > ul{
+	list-style: none;
+	margin: 0 0 2em;
+	padding: 0;
+	display: flex;
+	justify-content: flex-start;
+	gap: 1em;
+	border-bottom: 1px solid var(--appelboom-red);
+}
+#block-appelboom-primary-local-tasks > ul li{
+	flex: auto 0 0;
+	margin: 0 0 -1px 0;
+	background: var(--bg);
+	padding: 0.3em 1em;
+	border-top: 1px solid var(--appelboom-red);
+	border-right: 1px solid var(--appelboom-red);
+	border-left: 1px solid var(--appelboom-red);
+	border-radius: 0.5em 0.5em 0 0;
 }

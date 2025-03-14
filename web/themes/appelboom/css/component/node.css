@@ -1,23 +1,90 @@
-.node{
+.node.node--view-mode-full{
 	display: grid;
 	grid-template-columns: repeat(var(--column-count), minmax(0, 1fr));
 	column-gap: 0;
 }
-.field-content{
+.node.node--view-mode-full .field-content{
 	grid-column: 1 / 7;
 }
 
-.field-content > .align-right{
+.node.node--view-mode-full .field-content > .align-right{
+	clear: both;
 	max-width: calc(5 * var(--column-width));
 	margin-inline-end: calc(-100%);
 	position: sticky;
-	top: 0;
+	top: 5em;
 }
-.field-content p:first-of-type::first-letter {
+.node.node--view-mode-full .field-content h3:first-of-type,
+.node.node--view-mode-full .field-content h2:first-of-type,
+.node.node--view-mode-full .field-content p:first-of-type{
+	margin-top: 0;
+}
+.node.node--view-mode-full .field-content p:first-of-type::first-letter {
 	initial-letter: 2;
 	color: var(--appelboom-red);
 	font-weight: 900;
 	padding-right: 0.3em;
 }
-.field--name-field-featured-image{
+
+.node.node--view-mode-icon-link{
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+.node.node--view-mode-icon-link > a[rel="bookmark"]{
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	gap: 1em;
+}
+.node.node--view-mode-icon-link > a[rel="bookmark"] .field--name-field-icon{
+	flex: 2em 0 0;
+}
+.node.node--view-mode-icon-link > a[rel="bookmark"] > *:last-child{
+	flex: auto 1 1;
+}
+
+.node.node--view-mode-card{
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+.node.node--view-mode-card > a[rel="bookmark"]{
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	gap: 1em;
+	text-decoration: none;
+}
+.node.node--view-mode-card > a[rel="bookmark"]:hover,
+.node.node--view-mode-card.node--type-person > a[rel="bookmark"]:hover .field--name-field-person__role-job-title{
+	background: var(--appelboom-red-1pct);
+}
+.node.node--view-mode-card > a[rel="bookmark"] .field--name-field-featured-image{
+	flex: 5em 0 0;
+}
+.node.node--view-mode-card > a[rel="bookmark"] .field--name-field-featured-image img{
+	display: block;
+	border: 6px solid #ccc ;
+	border-radius: 50%;
+}
+.node.node--view-mode-card > a[rel="bookmark"] > *:last-child{
+	flex: auto 1 1;
+}
+.node.node--view-mode-card.node--type-person > a[rel="bookmark"]{
+	border-radius: 2.5em 0 0 2.5em;
+}
+.node.node--view-mode-card.node--type-person h3{
+	font-size: 1.333em;
+	font-weight: 500;
+	margin: 0;
+}
+.node.node--view-mode-card.node--type-person .field--name-field-person__role-job-title{
+	display: block;
+	font-style: italic;
+	color: var(--appelboom-body);
+	font-size: 0.889em;
+	font-weight: 300;
+	text-decoration: none;
 }

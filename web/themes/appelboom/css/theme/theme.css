@@ -1,7 +1,22 @@
-html,
-body{
+html{
 	color: var(--appelboom-body);
 	font-family: jali-latin-variable, sans-serif;
 	font-weight: 300;
+	font-size: 112.5%;
+	-ms-text-size-adjust: 100%;     /* 2 */
+	-webkit-text-size-adjust: 100%; /* 2 */
+	line-height: 1.5em;
 	background: var(--bg);
+}
+
+@media all and (max-width: 1200px){
+	html{
+		font-size: 100%
+	}
+}
+
+@media all and (max-width: 960px){
+	html{
+		font-size: 87.5%;
+	}
 }

@@ -5,16 +5,12 @@ body{
 .layout-container{
 }
 
-.region-content > *:not(#block-appelboom-content, #block-appelboom-featuredimageforappelboom){
+.region-content > *:not(#block-appelboom-featuredimageforappelboom),
+footer[role="contentinfo"] .region-footer{
 	max-width: var(--page-width);
 	margin-left: auto;
 	margin-right: auto;
 }
 .region-content #block-appelboom-content .node .field-content{
 
-}
-
-img{
-	max-width: 100%;
-	height: auto;
 }

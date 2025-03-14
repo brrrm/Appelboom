@@ -74,8 +74,11 @@
 
   {{ title_prefix }}
   <a href="{{ url }}" rel="bookmark">
-  	{{ content.field_featured_image}} 
-  	{{ label }}
+  	{{ content.field_featured_image}}
+  	<div class="name"> 
+	  	<h3>{{ label }}</h3>
+	  	{{ content.field_person__role_job_title }}
+	</div>
   </a>
   {{ title_suffix }}
 

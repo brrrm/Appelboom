@@ -2,8 +2,34 @@ footer[role="contentinfo"]{
 	border-top: 1px solid var(--appelboom-red-10pct);
 	border-bottom: 1px solid var(--appelboom-red-10pct);
 	padding: 2.5em 0;
+	margin: 5em 0;
+	position: relative;
+	color: var(--appelboom-red);
 }
 footer[role="contentinfo"] .region-footer{
-	max-width: 1200px;
-	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 4em;
+}
+.region-footer #block-appelboom-sitebranding2{
+	flex: auto 1 1;
+	order: 0;
+}
+.region-footer #block-appelboom-sitebranding2 > a{
+	width: min(100%, 20em);
+    display: block;
+    margin-top: calc( min(100%, 20em) * (-22 / 360));
+}
+.region-footer .postadres,
+.region-footer .contactadres{
+	flex: max-content 0 0;
+}
+.region-footer h2{
+	font-size: 1.333em;
+	font-weight: 500;
+	margin: 0;
+}
+.region-footer p{
+	margin: 0;
 }
