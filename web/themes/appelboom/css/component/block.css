@@ -1,0 +1,37 @@
+#block-appelboom-featuredimageforappelboom{
+	display: flex;
+	gap: 0;
+	align-items: flex-start;
+}
+#block-appelboom-featuredimageforappelboom .main{
+	flex: 60% 0 0;
+	min-height: 120vh;
+	position: relative;
+}
+#block-appelboom-featuredimageforappelboom .sidebar{
+	flex: 40% 0 0;
+	position: sticky;
+	top: 0;
+	padding: 2em;
+}
+#block-appelboom-featuredimageforappelboom .main #header-page-title{
+	position: sticky;
+	top: 80vh;
+	z-index: 2;
+	color: #fff;
+	text-shadow: 1px 1px 3px rgba(0,0,0,0.2) ;
+	margin: 2em 2em 2em calc(( (100% * (5/3)) - var(--page-width)) / 2);
+}
+#block-appelboom-featuredimageforappelboom .main .media{
+	position: absolute;
+	top: 0;
+}
+#block-appelboom-featuredimageforappelboom .main .media a{
+	display: block;
+}
+#block-appelboom-featuredimageforappelboom .main .media img{
+	display: block;
+	min-height: 120vh;
+	width: 100%;
+	object-fit: cover;
+}

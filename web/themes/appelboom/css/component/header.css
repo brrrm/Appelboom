@@ -1,0 +1,48 @@
+header#page-header{
+	border-bottom: 1px solid var(--appelboom-red-10pct);
+	padding: 1.25em 0;
+}
+header#page-header .region-header{
+	max-width: var(--page-width);
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+header#page-header #block-appelboom-site-branding{
+	flex: 270px 0 0;
+}
+#block-appelboom-main-menu > ul{
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	gap: 2em;
+}
+#block-appelboom-main-menu > ul li{
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+#block-appelboom-main-menu > ul ul{
+	display: block;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: absolute;
+	left: -9999em;
+	top: auto;
+}
+#block-appelboom-main-menu > ul li:hover > ul{
+	left: auto;
+}
+#block-appelboom-main-menu > ul a:link,
+#block-appelboom-main-menu > ul a:visited{
+	color: var(--appelboom-red);
+	text-decoration: none;
+}
+#block-appelboom-main-menu > ul a:hover,
+#block-appelboom-main-menu > ul a:focus,
+#block-appelboom-main-menu > ul a:active{
+	text-decoration: underline;
+}

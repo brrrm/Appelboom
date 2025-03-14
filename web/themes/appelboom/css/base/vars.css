@@ -1,0 +1,9 @@
+:root{
+	--bg: #FFFBF4;
+	--page-width: 1200px;
+	--appelboom-red: #D8102F;
+	--appelboom-red-10pct: #FFBFC9;
+	--appelboom-body: #484848;
+	--column-count: 12;
+	--column-width: min(100svw, var(--page-width)) / var(--column-count);
+}

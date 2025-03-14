@@ -1,0 +1,23 @@
+.node{
+	display: grid;
+	grid-template-columns: repeat(var(--column-count), minmax(0, 1fr));
+	column-gap: 0;
+}
+.field-content{
+	grid-column: 1 / 7;
+}
+
+.field-content > .align-right{
+	max-width: calc(5 * var(--column-width));
+	margin-inline-end: calc(-100%);
+	position: sticky;
+	top: 0;
+}
+.field-content p:first-of-type::first-letter {
+	initial-letter: 2;
+	color: var(--appelboom-red);
+	font-weight: 900;
+	padding-right: 0.3em;
+}
+.field--name-field-featured-image{
+}

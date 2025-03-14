@@ -4,6 +4,7 @@ global:
     js/appelboom.js: {}
   css:
     base:
+      css/base/vars.css: {}
       css/base/elements.css: {}
     component:
       css/component/block.css: {}
@@ -11,6 +12,7 @@ global:
       css/component/field.css: {}
       css/component/form.css: {}
       css/component/header.css: {}
+      css/component/footer.css: {}
       css/component/menu.css: {}
       css/component/messages.css: {}
       css/component/node.css: {}
@@ -21,4 +23,5 @@ global:
     layout:
       css/layout/layout.css: {}
     theme:
+      css/theme/theme.css: {}
       css/theme/print.css: { media: print }
