@@ -1,8 +1,8 @@
 footer[role="contentinfo"]{
 	border-top: 1px solid var(--appelboom-red-10pct);
 	border-bottom: 1px solid var(--appelboom-red-10pct);
-	padding: 2.5em 0;
-	margin: 5em 0;
+	padding: 2em 0 1em;
+	margin: 0;
 	position: relative;
 	color: var(--appelboom-red);
 }
@@ -32,4 +32,30 @@ footer[role="contentinfo"] .region-footer{
 }
 .region-footer p{
 	margin: 0;
+}
+
+aside#quote{
+	max-width: var(--page-width);
+	margin: 0 auto;
+	padding: 1.5em 0;
+	text-align: right;
+	position: sticky;
+	bottom: 0;
+	z-index: -1;
+	color: var(--appelboom-red);
+	font-style: italic;
+	font-weight: 300;
+	font-size: 1.333em;    
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 0.5em;
+}
+aside#quote:before{
+	content: " ";
+	display: inline-block;
+	width: 4rem;
+	height: 2rem;
+	background: transparent url(../../images/pijl.svg) center no-repeat;
+	background-size: contain;
 }

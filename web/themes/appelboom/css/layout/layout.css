@@ -5,7 +5,8 @@ body{
 .layout-container{
 }
 
-.region-content > *:not(#block-appelboom-featuredimageforappelboom),
+.region-content > #block-appelboom-primary-local-tasks,
+.region-content > #block-appelboom-content,
 footer[role="contentinfo"] .region-footer{
 	max-width: var(--page-width);
 	margin-left: auto;

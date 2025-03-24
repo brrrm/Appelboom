@@ -27,8 +27,12 @@ class FeaturedImageBlock extends BlockBase{
 		}
 
 		$title = NULL;
+
+		if(!$node){
+			return false;
+		}
 		
-		if($node && $node->hasField('field_featured_image') && !$node->get('field_featured_image')->isEmpty()){
+		if($node->hasField('field_featured_image') && !$node->get('field_featured_image')->isEmpty()){
 			$media = $node->get('field_featured_image')->entity;
 			$image = \Drupal::entityTypeManager()->getViewBuilder('media')->view($media, 'header');
 			$request = \Drupal::request();
@@ -41,7 +45,7 @@ class FeaturedImageBlock extends BlockBase{
 			];
 		}
 
-		if($node && $node->hasField('field_subtitle') && !$node->get('field_subtitle')->isEmpty()){
+		if($node->hasField('field_subtitle') && !$node->get('field_subtitle')->isEmpty()){
 			$display_options = [
 				'label' => 'hidden',
 				'type' => 'string',
@@ -50,7 +54,7 @@ class FeaturedImageBlock extends BlockBase{
 			$title['#suffix'] = sprintf('<p class="subtitle"><em>%s</em></p></div>', $subtitle);
 		}
 
-		if($node && $node->hasField('field_services') && !$node->get('field_services')->isEmpty()){
+		if($node->hasField('field_services') && !$node->get('field_services')->isEmpty()){
 			$display_options = [
 				'label' => 'above',
 				'type' => 'entity_reference_entity_view',
@@ -61,44 +65,47 @@ class FeaturedImageBlock extends BlockBase{
 			$services = $node->get('field_services')->view($display_options);
 		}
 
-		if($node && $node->hasField('field_lead_consultant') && !$node->get('field_lead_consultant')->isEmpty()){
+		if($node->hasField('field_lead_consultant') && !$node->get('field_lead_consultant')->isEmpty()){
 			$display_options = [
 				'label' => 'above',
 				'type' => 'entity_reference_entity_view',
 				'settings' => [
-					'view_mode' => 'card',
+					'view_mode' => 'icon_link',
 				],
 			];
 			$consultant = $node->get('field_lead_consultant')->view($display_options);
 		}
 
-		if($node && $node->hasField('field_case_study__client_name') && !$node->get('field_case_study__client_name')->isEmpty()){
+		if($node->hasField('field_case_study__client_name') && !$node->get('field_case_study__client_name')->isEmpty()){
 			$display_options = [
 				'label' => 'above',
 				'type' => 'string',
 			];
 			$client = $node->get('field_case_study__client_name')->view($display_options);
 		}
-			
-		if(!isset($node)){
-			return false;
-		}
 
-		return [
+		$return =  [
 			'main'			=> [
 				'#prefix'		=> '<div class="main">',
 				'#suffix'		=> '</div>',
 				'title'			=> $title,
 				'image'			=> $image ?? null,
 			],
-			'sidebar'		=> [
+			'#attributes'	=>	[
+				'class'			=> ['node-type-'.$node->bundle()]
+			]
+		];
+		if(isset($client) || isset($services) || isset($consultant)){
+			$return['sidebar'] = [
 				'#prefix'		=> '<div class="sidebar">',
 				'client'		=> $client ?? NULL,
 				'services'		=> $services ?? NULL,
 				'consultant'	=> $consultant ?? NULL,
 				'#suffix'		=> '</div>',
-			]
-		];
+			];
+		}
+
+		return $return;
 
 	}
 }
