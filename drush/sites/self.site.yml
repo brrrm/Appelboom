@@ -1,5 +1,5 @@
 # File: self.site.yml
-staging:
+production:
   host: appelboom
   user: appelboom
   root: /home/appelboom/domains/appelboomconsultancy.nl/website/web
