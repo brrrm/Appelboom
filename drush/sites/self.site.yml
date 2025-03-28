@@ -1,8 +1,0 @@
-# File: self.site.yml
-production:
-  host: appelboom
-  user: appelboom
-  root: /home/appelboom/domains/appelboomconsultancy.nl/website/web
-  uri: https://appelboomconsultancy.nl
-  env-vars:
-    DRUSH_NO_MIN_PHP: 1
