@@ -72,7 +72,7 @@
 %}
 <article{{ attributes.addClass(classes) }}>
   
-  {{ content.field_featured_image }}
+  {{ content.field_portrait }}
 
 	<div class="teaser-text">
 	  {{ title_prefix }}
@@ -83,7 +83,7 @@
 	  {% endif %}
 	  {{ title_suffix }}
 	  
-	  {{ content|without('field_featured_image', 'field_icon', 'field_person__role_job_title') }}
+	  {{ content|without('field_portrait', 'field_icon', 'field_person__role_job_title') }}
 	</div>
 
 </article>

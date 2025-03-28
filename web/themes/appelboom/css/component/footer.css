@@ -59,3 +59,26 @@ aside#quote:before{
 	background: transparent url(../../images/pijl.svg) center no-repeat;
 	background-size: contain;
 }
+
+@media all and (max-width: 960px){
+	footer[role="contentinfo"] .region-footer{
+		padding: 1rem var(--gutter);
+		gap: 1em;
+	}
+	.region-footer #block-appelboom-sitebranding2{
+		flex: 100% 0 0;
+		padding-bottom: 1rem;
+	}
+	aside#quote{
+		font-size: 1.25em;
+		padding-left: var(--gutter);
+		padding-right: var(--gutter);
+		display: block;
+		text-align: left;
+	}
+	aside#quote:before{
+		vertical-align: middle;
+		margin-right: 0.5em;
+		width: 3rem;
+	}
+}

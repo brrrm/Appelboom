@@ -15,3 +15,9 @@ footer[role="contentinfo"] .region-footer{
 .region-content #block-appelboom-content .node .field-content{
 
 }
+
+@media all and (max-width: 960px){
+	.region-content > #block-appelboom-content{
+		padding: 0 var(--gutter);
+	}
+}

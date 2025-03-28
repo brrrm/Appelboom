@@ -9,4 +9,5 @@
 	--column-count: 12;
 	--column-width: calc(min(100svw, var(--page-width)) / var(--column-count));
 	--column-gap: 4em;
+	--gutter: 2rem;
 }

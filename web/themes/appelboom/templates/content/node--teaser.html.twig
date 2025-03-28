@@ -73,16 +73,18 @@
 <article{{ attributes.addClass(classes) }}>
   
   {{ content.field_featured_image }}
+  {{ content.field_icon }}
 
-  {{ title_prefix }}
-  {% if label and not page %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }} {{ content.field_person__role_job_title }}</a>
-    </h2>
-  {% endif %}
-  {{ title_suffix }}
-  
-
-  {{ content|without('field_featured_image', 'field_person__role_job_title') }}
+	<div class="teaser-text">
+	  {{ title_prefix }}
+	  {% if label and not page %}
+	    <h2{{ title_attributes }}>
+	      <a href="{{ url }}" rel="bookmark">{{ label }} {{ content.field_person__role_job_title }}</a>
+	    </h2>
+	  {% endif %}
+	  {{ title_suffix }}
+	  
+	  {{ content|without('field_featured_image', 'field_icon', 'field_person__role_job_title') }}
+	</div>
 
 </article>

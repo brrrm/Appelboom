@@ -25,5 +25,24 @@ function appelboom_preprocess_page(array &$variables): void {
  * Implements hook_preprocess_HOOK() for node.html.twig.
  */
 function appelboom_preprocess_node(array &$variables): void {
+	
+	//if(isset($variables['content']['links'])){error_log(print_r($variables['content']['links'], true));}
+}
 
+function appelboom_node_links_alter(array &$links, NodeInterface $entity, array &$context){
+	error_log('call me');
+	$links['appelboom'] = [
+      	'#theme' => 'links__node',
+      	'#weight'	=> -1000,
+		'#links'	=> [
+			'email'	=> [
+				'weight'	=> -1000,
+				'title'		=> 'E-mail',
+				'url'		=> Url::fromRoute('book.export', [
+                            'type' => 'html',
+                            'node' => $node->id(),
+                        ]),
+			]
+		]
+	];
 }

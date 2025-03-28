@@ -62,7 +62,7 @@ class InspirationBlock extends BlockBase implements ContainerFactoryPluginInterf
 		$config = $this->getConfiguration();
 		$node_id = $config['node_id'] ?? NULL;
 		if($node_id && $node = $this->entityTypeManager->getStorage('node')->load($node_id)){
-			$teaser = $this->entityTypeManager->getViewBuilder('node')->view($node, 'teaser');
+			$teaser = $this->entityTypeManager->getViewBuilder('node')->view($node, 'card');
 		}
 
 		/*$text = $config['inspiration_text']['value'] ?? 'SCHRIJF EEN TEKST';

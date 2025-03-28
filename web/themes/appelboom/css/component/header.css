@@ -1,6 +1,8 @@
 header#page-header{
 	border-bottom: 1px solid var(--appelboom-red-10pct);
 	padding: 1.25em 0;
+		position: relative;
+		z-index: 2;
 }
 header#page-header .region-header{
 	max-width: var(--page-width);
@@ -12,12 +14,28 @@ header#page-header .region-header{
 header#page-header #block-appelboom-site-branding{
 	flex: 270px 0 0;
 }
+@media all and (max-width: 960px){
+	header#page-header{
+		padding-left: calc(0.3 * var(--gutter));
+		padding-right: var(--gutter);
+	}
+	header#page-header .region-header{
+		justify-content: space-between;
+	}
+}
+
+button#hamburger{
+	display: none;
+}
+
 #block-appelboom-main-menu > ul{
 	display: flex;
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	gap: 2em;
+	gap: 3em;
+	font-weight: 500;
+	letter-spacing: 0.1em;
 }
 #block-appelboom-main-menu > ul li{
 	position: relative;
@@ -26,12 +44,16 @@ header#page-header #block-appelboom-site-branding{
 }
 #block-appelboom-main-menu > ul ul{
 	display: block;
-	margin: 0;
-	padding: 0;
+	margin: 0 calc(-1* var(--gutter));
+	padding: var(--gutter);
 	list-style: none;
 	position: absolute;
 	left: -9999em;
-	top: auto;
+	top: 100%;
+	background: var(--bg);
+}
+#block-appelboom-main-menu > ul ul li{
+	margin: 0 0 0.5em;
 }
 #block-appelboom-main-menu > ul li:hover > ul{
 	left: auto;
@@ -45,4 +67,54 @@ header#page-header #block-appelboom-site-branding{
 #block-appelboom-main-menu > ul a:focus,
 #block-appelboom-main-menu > ul a:active{
 	text-decoration: underline;
+}
+
+@media all and (max-width: 960px){
+	#block-appelboom-main-menu{
+		position: absolute;
+		left: -100%;
+		width: 100%;
+		height: calc(100vh - 105px);
+		transition: left 0.3s ease;
+		background: var(--bg);
+		top: calc(100% + 1px);
+		padding: var(--gutter) var(--gutter) 5rem;
+		font-size: 1.5em;
+		overflow: auto;
+	}
+	button#hamburger{
+		display: block;
+		width: 2em;
+		height: 2em;
+		text-indent: -9999em;
+		overflow: hidden;
+		background: transparent url(../../images/hamburger.svg) center no-repeat;
+		background-size: contain;
+		border: none;
+		margin-top: -11px;
+	}
+	body.show-nav{
+		overflow: hidden;
+	}
+	body.show-nav #block-appelboom-main-menu{
+		left: 0;
+	}
+
+	#block-appelboom-main-menu > ul{
+		display: block;
+	}
+	#block-appelboom-main-menu > ul ul{
+		position: static;
+		text-transform: uppercase;
+		font-size: 0.8em;
+		padding: 0 0 0 1rem;
+		margin: 1.5rem 0 0;
+	}
+	#block-appelboom-main-menu > ul li{
+		padding: 0.3rem 0;
+		margin: 1.5rem 0;
+	}
+	#block-appelboom-main-menu > ul li:last-child{
+		margin-bottom: 0;
+	}
 }

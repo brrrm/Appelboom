@@ -1,0 +1,46 @@
+<?php
+
+use Drupal\Core\Url;
+use Drupal\Core\Link;
+use Drupal\node\NodeInterface;
+
+function appelblocks_node_links_alter(array &$links, NodeInterface $entity, array &$context){
+
+	if($entity->bundle() == 'person' && $context['view_mode'] == 'teaser'){
+		
+		$email = $entity->get('field_person__email')->isEmpty()? NULL : $entity->get('field_person__email')->value;
+		$linkedin = $entity->get('field_linkedin')->isEmpty()? NULL : $entity->get('field_linkedin')->first()->getUrl();
+
+		$appellinks = [
+	      	'#theme' => 'links__node',
+	        '#attributes' => [
+	            'class' => [
+	                'links',
+	                'inline',
+	                'appelboom'
+	            ],
+	        ],
+	    ];
+
+	    if(isset($email)){
+				$appellinks['#links']['email']	= [
+					'title'		=> 'E-mail',
+					'url'		=> Url::fromUri('mailto:' . $email),
+					'attributes'	=> [
+						'class'		=> ['email']
+					]
+				];
+		}
+		if(isset($linkedin)){
+					$appellinks['#links']['linkedin'] = [
+						'title'		=> 'LinkedIn',
+						'url'		=> $linkedin,
+						'attributes'	=> [
+							'class'		=> ['linkedin']
+						]
+					];
+		}
+		array_unshift($links, $appellinks);
+
+	}
+}

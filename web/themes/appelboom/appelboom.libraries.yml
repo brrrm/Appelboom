@@ -25,3 +25,7 @@ global:
     theme:
       css/theme/theme.css: {}
       css/theme/print.css: { media: print }
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings

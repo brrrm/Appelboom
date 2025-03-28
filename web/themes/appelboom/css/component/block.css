@@ -1,3 +1,28 @@
+.title-subtitle{
+	color: var(--appelboom-red);
+	line-height: 1;
+}
+h1#header-page-title{
+	margin: 0;
+	font-weight: 600;
+	font-size: 3.333rem;
+}
+.subtitle,
+.inner-subtitle{
+	font-style: italic;
+	font-weight: 300;
+	font-size: 2rem;
+	margin: 0.3em 0 0 0;
+}
+.inner-subtitle{
+	display: block;
+}
+@media all and (max-width: 960px){
+	.title-subtitle{
+		margin-top: 3em;
+	}
+}
+
 #block-appelboom-featuredimageforappelboom{
 	display: flex;
 	gap: 0;
@@ -21,21 +46,7 @@
 	z-index: 2;
 	margin: 2em 2em 2em calc(( (100% * (5/3)) - var(--page-width)) / 2);
 	line-height: 1;
-}
-#block-appelboom-featuredimageforappelboom .main .title-subtitle h1#header-page-title{
-	color: #fff;
 	text-shadow: 2px 2px 7px rgba(0,0,0,0.4);
-	margin: 0;
-	font-weight: 600;
-	font-size: 3.333em;
-}
-#block-appelboom-featuredimageforappelboom .main .title-subtitle .subtitle{
-	font-style: italic;
-	font-weight: 300;
-	font-size: 2.444em;
-	color: #fff;
-	text-shadow: 2px 2px 7px rgba(0,0,0,0.4);
-	margin: 0.3em 0 0 0;
 }
 #block-appelboom-featuredimageforappelboom .main .media{
 	position: absolute;
@@ -147,6 +158,11 @@
 	gap: 0.5em;
 	justify-content: right;
 }
+@media all and (max-width: 960px){
+	#block-appelboom-views-block-case-studies-latest{
+		padding: var(--gutter);
+	}
+}
 
 #block-appelboom-views-block-case-studies-related,
 #block-appelboom-views-block-case-studies-block-2{
@@ -174,3 +190,263 @@
 #block-appelboom-views-block-case-studies-block-2 .view-rows .views-row{
 	flex: 18em 0 0;
 }
+
+
+#block-appelboom-titlesubtitleandintroforappelboom{
+	max-width: var(--page-width);
+	margin: 6.667em auto 5em;
+	line-height: 3em;
+}
+#block-appelboom-titlesubtitleandintroforappelboom .field--name-field-featured-image{
+	float: right;
+	width: 30em;
+	margin: -5em 0 2em 2em;
+}
+#block-appelboom-titlesubtitleandintroforappelboom h1{
+	font-size: 3.333em;
+	color: var(--appelboom-red);
+	margin: 0;
+}
+#block-appelboom-titlesubtitleandintroforappelboom .subtitle{
+	font-size: 2em;
+	font-weight: 300;
+	font-style: italic;
+	color: var(--appelboom-red);
+	margin: 0.2em 0 0;
+}
+#block-appelboom-titlesubtitleandintroforappelboom .field--name-field-description{
+	font-size: 2em;
+	font-weight: 300;
+	font-style: italic;
+	margin: 0.9em 0;
+}
+@media all and (max-width: 960px){
+	#block-appelboom-titlesubtitleandintroforappelboom{
+		padding: 0 var(--gutter);
+		margin: 0 0 3em;
+	}
+	#block-appelboom-titlesubtitleandintroforappelboom .field--name-field-featured-image{
+		float: none;
+		width: auto;
+		margin: 0 calc(-1 * var(--gutter)) 3em;
+	}
+}
+
+
+
+
+#block-appelboom-views-block-diensten-block-1,
+#block-appelboom-views-block-person-profiles-all{
+	max-width: var(--page-width);
+	margin: 5em auto;
+}
+#block-appelboom-views-block-diensten-block-1 .item-list ul,
+#block-appelboom-views-block-person-profiles-all .item-list ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+@media all and (max-width: 960px){
+	#block-appelboom-views-block-diensten-block-1,
+	#block-appelboom-views-block-person-profiles-all{
+		padding: 0 var(--gutter);
+	}
+}
+
+
+
+#block-appelboom-headerblockforpersonsforappelboom{
+	max-width: var(--page-width);
+	margin: 0 auto 5em;
+	display: flex;
+	flex-wrap: wrap;
+}
+#block-appelboom-headerblockforpersonsforappelboom .field--name-field-portrait{
+	border-radius: 50%;
+	border: 6px solid var(--appelboom-red);
+	width: 12em;
+	height: 12em;
+	overflow: hidden;
+	margin: -6em 0 0 2em;
+}
+#block-appelboom-headerblockforpersonsforappelboom .field--name-field-featured-image{
+	flex: 100% 0 0;
+}
+#block-appelboom-headerblockforpersonsforappelboom .title-subtitle{
+	margin: 1.5em 0 0 0;
+}
+#block-appelboom-headerblockforpersonsforappelboom .left{
+	flex: auto 1 1;
+}
+#block-appelboom-headerblockforpersonsforappelboom .right{
+	flex: auto	0 0;
+	display: flex;
+	align-items: center;
+}
+#block-appelboom-headerblockforpersonsforappelboom .right ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#block-appelboom-headerblockforpersonsforappelboom .right ul li{
+	margin: 0.5em 0;
+}
+#block-appelboom-headerblockforpersonsforappelboom .right ul li a{
+	display: flex;
+	align-items: center;
+}
+#block-appelboom-headerblockforpersonsforappelboom .right ul li a:before{
+	display: inline-block;
+	content: " ";
+	width: 1.5em;
+	height: 1.5em;
+	text-indent: -999em;
+	background: transparent url(../../images/mail.svg) center no-repeat;
+	background-size: contain;
+	margin: 0 0.5em 0 0;
+}
+#block-appelboom-headerblockforpersonsforappelboom .right ul li a.linkedIn-link:before{
+	background-image: url(../../images/linkedin.svg);
+}
+#block-appelboom-headerblockforpersonsforappelboom .right ul li a.phone-link:before{
+	background-image: url(../../images/phone.svg);
+}
+#block-appelboom-headerblockforpersonsforappelboom .field--name-field-description{
+	flex: 100% 0 0;
+	font-size: 2em;
+    font-weight: 300;
+    font-style: italic;
+    margin: 0.9em 0;
+    line-height: 1.5;
+}
+
+
+
+
+#block-appelboom-views-block-case-studies-all{
+	max-width: var(--page-width);
+	margin: 0 auto 5em;
+}
+#block-appelboom-views-block-case-studies-all .view-rows{
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--column-gap);
+}
+#block-appelboom-views-block-case-studies-all .view-rows > header{
+	flex: 100% 0 0;
+}
+#block-appelboom-views-block-case-studies-all .view-rows .views-row{
+	flex: calc(33.3% - (2/3 * var(--column-gap))) 0 0;
+}
+#block-appelboom-views-block-case-studies-all .view-rows .views-row p.field--name-field-description{
+	max-height: 7.5em;
+	overflow: hidden;
+	font-size: 1.1667em;
+}
+@media all and (max-width: 960px){
+	#block-appelboom-views-block-case-studies-all{
+		padding: 0 var(--gutter);
+	}
+	#block-appelboom-views-block-case-studies-all .view-rows{
+		display: block;
+	}
+	#block-appelboom-views-block-case-studies-all .view-rows .views-row{
+		margin-bottom: 5em;
+	}
+
+}
+
+
+#block-appelboom-headerblockforhomepageforappelboom{
+	width: 100%;
+}
+#block-appelboom-headerblockforhomepageforappelboom .homepage-header-image{
+	height: 70vh;
+	width: 100%;
+	position: relative;
+}
+#block-appelboom-headerblockforhomepageforappelboom .field--name-field-featured-image{
+	width: 100%;
+	height: 100%;
+}
+#block-appelboom-headerblockforhomepageforappelboom .field--name-field-featured-image img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+#block-appelboom-headerblockforhomepageforappelboom .title-subtitle{
+	position: absolute;
+	bottom: 2em;
+	/*left: calc(50% - (var(--page-width) / 2));*/
+	left: max(calc(50% - (var(--page-width) / 2)), var(--gutter));
+	color: #fff;
+}
+#block-appelboom-headerblockforhomepageforappelboom .header-services{
+	max-width: var(--page-width);
+	margin: 1em auto 0;
+	color: var(--appelboom-red);
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+}
+#block-appelboom-headerblockforhomepageforappelboom .header-services > h2{
+	flex: 100% 0 0;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1em;
+	font-weight: 300;
+	margin: 0.5em 0 2em;
+}
+#block-appelboom-headerblockforhomepageforappelboom .homepage-link{
+	display: flex;
+	align-items: center;
+	gap: 0.5em;
+}
+#block-appelboom-headerblockforhomepageforappelboom .homepage-link i{
+	flex: 4rem 0 0;
+	display: inline-block;
+	width: 4rem;
+	height: 2rem;
+	background: transparent url(../../images/pijl-wit.svg) center no-repeat;
+	background-size: contain;
+}
+#block-appelboom-headerblockforhomepageforappelboom .homepage-link a{
+	color: #fff;
+	background: var(--appelboom-red);
+	border-radius: 2em;
+	font-size: 1.333em;
+	padding: 0.5em 1em;
+}
+#block-appelboom-headerblockforhomepageforappelboom .header-services .node{
+	flex: 12em 0 1;
+	font-size: 1.5em;
+	font-weight: 500;
+}
+#block-appelboom-headerblockforhomepageforappelboom .field--name-field-description{
+	font-size: 2em;
+	font-weight: 300;
+	font-style: italic;
+	max-width: var(--page-width);
+	margin: 2em auto 0.9em;
+	line-height: 1.5;
+}
+@media all and (max-width: 960px){
+	#block-appelboom-headerblockforhomepageforappelboom{
+		padding: 0 var(--gutter);
+	}
+	#block-appelboom-headerblockforhomepageforappelboom .homepage-header-image{
+		margin: 0 calc(-1 * var(--gutter));
+		width: auto;
+		height: 50svh;
+	}
+	#block-appelboom-headerblockforhomepageforappelboom .header-services{
+		display: block;
+		margin-top: 2em;
+	}
+	#block-appelboom-headerblockforhomepageforappelboom .header-services .node{
+		margin: 1em 0;
+	}
+}
+

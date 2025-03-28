@@ -2,7 +2,7 @@
  * @file
  * Appelboom behaviors.
  */
-(function (Drupal) {
+(function ($, Drupal, drupalSettings) {
 
   'use strict';
 
@@ -10,8 +10,12 @@
     attach (context, settings) {
 
       console.log('It works!');
+      $(document).on('click', '#hamburger', function(e){
+      	e.preventDefault();
+      	$('body').toggleClass('show-nav');
+      })
 
     }
   };
 
-} (Drupal));
+}) (jQuery, Drupal, drupalSettings);
