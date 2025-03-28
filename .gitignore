@@ -26,6 +26,7 @@ launch-drupal-cms.sh
 README.md
 /web/libraries
 /drush/drush.yml
+/drush/sites/self.site.yml
 /web/.htaccess
 /web/web.config
 /web/authorize.php
