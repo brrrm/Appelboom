@@ -22,15 +22,13 @@ class FeaturedImageBlock extends BlockBase{
 
 		// get current node
 		$node = \Drupal::routeMatch()->getParameter('node');
-		if($node){
-			$cache_tags = $node->getCacheTags();
-		}
-
-		$title = NULL;
-
 		if(!$node){
 			return false;
 		}
+
+		$cache_tags = $node->getCacheTags();
+
+		$title = NULL;
 		
 		if($node->hasField('field_featured_image') && !$node->get('field_featured_image')->isEmpty()){
 			$media = $node->get('field_featured_image')->entity;
@@ -93,6 +91,10 @@ class FeaturedImageBlock extends BlockBase{
 			],
 			'#attributes'	=>	[
 				'class'			=> ['node-type-'.$node->bundle()]
+			],
+			'#cache' => [
+				'tags' => $cache_tags,
+				'contexts' => ['url.path']
 			]
 		];
 		if(isset($client) || isset($services) || isset($consultant)){

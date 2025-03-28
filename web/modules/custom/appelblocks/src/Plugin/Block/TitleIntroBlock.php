@@ -111,6 +111,10 @@ class TitleIntroBlock extends BlockBase implements ContainerFactoryPluginInterfa
 			$intro,
 			'#attributes'	=> [
 				'class'		=> ['clearfix']
+			],
+			'#cache' => [
+				'tags' => $cache_tags,
+				'contexts' => ['url.path']
 			]
 		];
 

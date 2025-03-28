@@ -137,7 +137,11 @@ class HomepageHeaderBlock extends BlockBase implements ContainerFactoryPluginInt
 				'title'		=> $title,
 			],
 			'services'		=> $services,
-			'intro'			=> $intro ?? NULL
+			'intro'			=> $intro ?? NULL,
+			'#cache' => [
+				'tags' => $cache_tags,
+				'contexts' => ['url.path']
+			]
 		];
 
 		return $return;

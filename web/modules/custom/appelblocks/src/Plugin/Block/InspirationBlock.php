@@ -61,7 +61,9 @@ class InspirationBlock extends BlockBase implements ContainerFactoryPluginInterf
 	public function build(){
 		$config = $this->getConfiguration();
 		$node_id = $config['node_id'] ?? NULL;
+		$cache_tags = [];
 		if($node_id && $node = $this->entityTypeManager->getStorage('node')->load($node_id)){
+			$cache_tags = $node->getCacheTags();
 			$teaser = $this->entityTypeManager->getViewBuilder('node')->view($node, 'card');
 		}
 
@@ -76,6 +78,10 @@ class InspirationBlock extends BlockBase implements ContainerFactoryPluginInterf
 
 		return [
 			'teaser' => $teaser ?? NULL,
+			'#cache' => [
+				'tags' => $cache_tags,
+				'contexts' => ['url.path']
+			]
 		];
 	}
 
