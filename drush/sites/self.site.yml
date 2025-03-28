@@ -1,0 +1,6 @@
+# File: self.site.yml
+staging:
+  host: appelboom
+  user: appelboom
+  root: /home/appelboom/domains/appelboomconsultancy.nl/website/web
+  uri: https://appelboomconsultancy.nl
