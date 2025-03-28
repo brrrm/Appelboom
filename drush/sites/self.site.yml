@@ -5,4 +5,4 @@ production:
   root: /home/appelboom/domains/appelboomconsultancy.nl/website/web
   uri: https://appelboomconsultancy.nl
   env-vars:
-    DRUSH_NO_MIN_PHP=1
+    DRUSH_NO_MIN_PHP: 1
