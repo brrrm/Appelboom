@@ -211,6 +211,7 @@
 
 
 .node.node--type-service.node--view-mode-teaser,
+.taxonomy_term--view-mode-teaser,
 .node.node--type-person.node--view-mode-teaser{
 	display: flex;
 	gap: 4em;
@@ -218,6 +219,7 @@
 	margin: 5em 0;
 }
 .node.node--type-service.node--view-mode-teaser h2,
+.taxonomy_term--view-mode-teaser h2,
 .node.node--type-person.node--view-mode-teaser h2{
 	margin: 0;
 }
@@ -226,6 +228,7 @@
 	margin-left: 1em;
 }
 .node.node--type-service.node--view-mode-teaser .field--name-field-icon,
+.taxonomy_term--view-mode-teaser .field--name-field-icon,
 .node.node--type-person.node--view-mode-teaser .field--name-field-portrait{
 	flex: 7em 0 0;
 	display: block;
@@ -238,16 +241,19 @@
 	overflow: hidden;
 }
 .node.node--type-service.node--view-mode-teaser .teaser-text,
+.taxonomy_term--view-mode-teaser .teaser-text,
 .node.node--type-person.node--view-mode-teaser .teaser-text{
 	flex: auto 1 1;
 }
 .node.node--type-service.node--view-mode-teaser .field--name-field-description,
+.taxonomy_term--view-mode-teaser .field--name-field-description,
 .node.node--type-person.node--view-mode-teaser .field--name-field-description{
 	margin: 0.5em 0;
 	font-size: 1.1667em;
 	line-height: 1.5;
 }
-.node--view-mode-teaser ul.links{
+.node--view-mode-teaser ul.links,
+.taxonomy_term--view-mode-teaser ul.links{
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -256,13 +262,15 @@
 	gap: 0.8em;
 	font-size: 1.1667em;
 }
-.node--view-mode-teaser ul.links a{
+.node--view-mode-teaser ul.links a,
+.taxonomy_term--view-mode-teaser ul.links a{
 	display: flex;
 	gap: 0.5rem;
 	align-items: center;
 	text-transform: lowercase;
 }
-.node--view-mode-teaser ul.links a:before{
+.node--view-mode-teaser ul.links a:before,
+.taxonomy_term--view-mode-teaser ul.links a:before{
 	content: " ";
 	display: inline-block;
 	width: 3rem;
@@ -302,6 +310,7 @@
 		flex-direction: column;
 	}
 	.node.node--type-service.node--view-mode-teaser .field--name-field-icon,
+	.taxonomy_term--view-mode-teaser .field--name-field-icon,
 	.node.node--type-person.node--view-mode-teaser .field--name-field-portrait{
 		flex: 5em 0 0;
 	}
