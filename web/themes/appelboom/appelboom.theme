@@ -54,7 +54,9 @@ function appelboom_preprocess_taxonomy_term(array &$variables): void {
 			'#links'	=> [
 				'email'	=> [
 					'weight'	=> -1000,
-					'title'		=> t('Read more'),
+					'title'		=> t('Read more<span class="visually-hidden"> about @title</span>', [
+						'@title' => $term->label(),
+					]),
 					'url'		=> Url::fromRoute('entity.taxonomy_term.canonical', [
                         'taxonomy_term' => $term->id(),
                     ]),
