@@ -43,6 +43,13 @@ function appelboom_preprocess_taxonomy_term(array &$variables): void {
 		'appelboom'		=> [
 	      	'#theme' => 'links__node',
 	      	'#weight'	=> -1000,
+	      	'#attributes'	=> [
+	      		'class'		=> [
+	                'links',
+	                'inline',
+	                'appelboom'
+	            ]
+	      	],
 			'#links'	=> [
 				'email'	=> [
 					'weight'	=> -1000,
