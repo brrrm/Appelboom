@@ -23,11 +23,18 @@
  * @see template_preprocess_taxonomy_term()
  */
 #}
-<div{{ attributes }}>
+{%
+  set classes = [
+    'taxonomy_term',
+    not node.isPublished() ? 'taxonomy_term--unpublished',
+    view_mode ? 'taxonomy_term--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+<article{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if name and not page %}
     <h2><a href="{{ url }}">{{ name }}</a></h2>
   {% endif %}
   {{ title_suffix }}
   {{ content }}
-</div>
+</article>

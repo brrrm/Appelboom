@@ -1,13 +1,18 @@
-.node.node--view-mode-full{
+.node.node--view-mode-full,
+.taxonomy_term.taxonomy_term--view-mode-full{
 	display: grid;
 	grid-template-columns: repeat(var(--column-count), minmax(0, 1fr));
 	column-gap: var(--column-gap);
 }
-.node.node--view-mode-full .field-content{
+.node.node--view-mode-full .field-content,
+.taxonomy_term.taxonomy_term--view-mode-full .field--name-description{
 	grid-column: 1 / 7;
+	font-size: 1.1667em;
+	line-height: 1.5;
 }
 
-.node.node--view-mode-full .field-content > .align-right{
+.node.node--view-mode-full .field-content > .align-right,
+.taxonomy_term.taxonomy_term--view-mode-full .field--name-description > .align-right{
 	clear: both;
 	max-width: calc(6 * var(--column-width) - (var(--column-gap) / 2));
 	margin-inline-end: calc(-100% - var(--column-gap));
@@ -15,10 +20,12 @@
 	top: 5em;
 }
 @media all and (max-width: 960px){
-	.node.node--view-mode-full{
+	.node.node--view-mode-full,
+	.taxonomy_term.taxonomy_term--view-mode-full{
 		display: block;
 	}
-	.node.node--view-mode-full .field-content > .align-right{
+	.node.node--view-mode-full .field-content > .align-right,
+	.taxonomy_term.taxonomy_term--view-mode-full .field--name-description > .align-right{
 		position: static;
 		float: none;
 		max-width: unset;
@@ -27,15 +34,17 @@
 	}
 }
 .node.node--view-mode-full .field-content{
-	font-size: 1.1667em;
-	line-height: 1.5;
 }
 .node.node--view-mode-full .field-content h3:first-of-type,
 .node.node--view-mode-full .field-content h2:first-of-type,
-.node.node--view-mode-full .field-content p:first-of-type{
+.node.node--view-mode-full .field-content p:first-of-type,
+.taxonomy_term.taxonomy_term--view-mode-full .field--name-description h3:first-of-type,
+.taxonomy_term.taxonomy_term--view-mode-full .field--name-description h2:first-of-type
+.taxonomy_term.taxonomy_term--view-mode-full .field--name-description p:first-of-type{
 	margin-top: 0;
 }
-.node.node--view-mode-full .field-content > p:first-child::first-letter {
+.node.node--view-mode-full .field-content > p:first-child::first-letter,
+.taxonomy_term.taxonomy_term--view-mode-full .field--name-description > p:first-child::first-letter{
 	initial-letter: 3;
 	color: var(--appelboom-red);
 	font-weight: 900;

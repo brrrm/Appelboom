@@ -36,7 +36,9 @@ function appelblocks_node_links_alter(array &$links, NodeInterface $entity, arra
 						'title'		=> 'LinkedIn',
 						'url'		=> $linkedin,
 						'attributes'	=> [
-							'class'		=> ['linkedin']
+							'class'		=> ['linkedin'],
+							'target'	=> '_blank',
+							'rel'		=> 'nofollow'
 						]
 					];
 		}

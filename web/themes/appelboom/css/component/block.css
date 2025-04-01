@@ -192,40 +192,46 @@ h1#header-page-title{
 }
 
 
-#block-appelboom-titlesubtitleandintroforappelboom{
+.titlesubtitleandintroforappelboom{
 	max-width: var(--page-width);
 	margin: 6.667em auto 5em;
 	line-height: 3em;
 }
-#block-appelboom-titlesubtitleandintroforappelboom .field--name-field-featured-image{
+.titlesubtitleandintroforappelboom .field--name-field-featured-image,
+.titlesubtitleandintroforappelboom .field--type-entity-reference{
 	float: right;
 	width: 30em;
 	margin: -5em 0 2em 2em;
 }
-#block-appelboom-titlesubtitleandintroforappelboom h1{
+.titlesubtitleandintroforappelboom .field--type-entity-reference{
+	width: 20em;
+	margin-top: 0;
+}
+.titlesubtitleandintroforappelboom h1{
 	font-size: 3.333em;
 	color: var(--appelboom-red);
 	margin: 0;
 }
-#block-appelboom-titlesubtitleandintroforappelboom .subtitle{
+.titlesubtitleandintroforappelboom .subtitle{
 	font-size: 2em;
 	font-weight: 300;
 	font-style: italic;
 	color: var(--appelboom-red);
 	margin: 0.2em 0 0;
 }
-#block-appelboom-titlesubtitleandintroforappelboom .field--name-field-description{
+.titlesubtitleandintroforappelboom .field--name-field-description{
 	font-size: 2em;
 	font-weight: 300;
 	font-style: italic;
 	margin: 0.9em 0;
 }
 @media all and (max-width: 960px){
-	#block-appelboom-titlesubtitleandintroforappelboom{
+	.titlesubtitleandintroforappelboom{
 		padding: 0 var(--gutter);
 		margin: 0 0 3em;
 	}
-	#block-appelboom-titlesubtitleandintroforappelboom .field--name-field-featured-image{
+	.titlesubtitleandintroforappelboom .field--name-field-featured-image,
+	.titlesubtitleandintroforappelboom .field--type-entity-reference{
 		float: none;
 		width: auto;
 		margin: 0 calc(-1 * var(--gutter)) 3em;

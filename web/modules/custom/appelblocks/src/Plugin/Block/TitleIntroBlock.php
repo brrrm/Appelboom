@@ -60,34 +60,42 @@ class TitleIntroBlock extends BlockBase implements ContainerFactoryPluginInterfa
 		$cache_tags = array();
 
 		// get current node
-		$node = \Drupal::routeMatch()->getParameter('node');
+		$entity = \Drupal::routeMatch()->getParameter('node') ?? \Drupal::routeMatch()->getParameter('taxonomy_term');
 
-		if(!$node){
+		if(!$entity){
 			return false;
 		}
 
-		$cache_tags = $node->getCacheTags();
+		$cache_tags = $entity->getCacheTags();
 		
-		$request = \Drupal::request();
-		$route_match = \Drupal::routeMatch();
-		$title = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
+		$title = $entity->label();
 		$title = [
 			'#prefix'	=> '<div class="title-subtitle">',
 			'#markup'	=> sprintf('<h1 id="header-page-title" class="page__title title">%s</h1>', $title),
 			'#suffix'	=> '</div>'
 		];
 
-		if($node->hasField('field_subtitle') && !$node->get('field_subtitle')->isEmpty()){
+		if($entity->hasField('field_subtitle') && !$entity->get('field_subtitle')->isEmpty()){
 			$display_options = [
 				'label' => 'hidden',
 				'type' => 'string',
 			];
-			$subtitle = $node->get('field_subtitle')->value;
+			$subtitle = $entity->get('field_subtitle')->value;
 			$title['#suffix'] = sprintf('<p class="subtitle"><em>%s</em></p></div>', $subtitle);
 		}
 		
-		if($node->hasField('field_featured_image') && !$node->get('field_featured_image')->isEmpty()){
-			$image = $node->get('field_featured_image')->view([
+		if($entity->hasField('field_featured_image') && !$entity->get('field_featured_image')->isEmpty()){
+			$image = $entity->get('field_featured_image')->view([
+				'label'		=> 'hidden',
+				'type'		=> 'media_thumbnail',
+				'settings'	=> [
+					'image_style'	=> '4_3_1800x1350_focal_point_webp'
+				]
+			]);
+		}
+		
+		if($entity->hasField('field_icon') && !$entity->get('field_icon')->isEmpty()){
+			$image = $entity->get('field_icon')->view([
 				'label'		=> 'hidden',
 				'type'		=> 'media_thumbnail',
 				'settings'	=> [
@@ -96,21 +104,20 @@ class TitleIntroBlock extends BlockBase implements ContainerFactoryPluginInterfa
 			]);
 		}
 
-		if($node->hasField('field_description') && !$node->get('field_description')->isEmpty()){
-
+		if($entity->hasField('field_description') && !$entity->get('field_description')->isEmpty()){
 			$display_options = [
 				'label' => 'hidden',
 				'type' => 'string',
 			];
-			$intro = $node->get('field_description')->view($display_options);
+			$intro = $entity->get('field_description')->view($display_options);
 		}
 
 		$return =  [
-			$image ?? NULL,
-			$title,
-			$intro,
+			'image'	=> $image ?? NULL,
+			'title'	=> $title,
+			'intro'	=> $intro,
 			'#attributes'	=> [
-				'class'		=> ['clearfix']
+				'class'		=> ['clearfix', 'titlesubtitleandintroforappelboom']
 			],
 			'#cache' => [
 				'tags' => $cache_tags,
