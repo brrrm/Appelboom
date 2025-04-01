@@ -100,13 +100,15 @@
 }
 
 
-.node.node--view-mode-teaser h2{
+.node.node--view-mode-teaser h2,
+.taxonomy_term--view-mode-teaser h2{
 	font-size: 1.7778em;
 	margin: 1.5rem 0 1rem;
 	font-weight: 300;
 	line-height: 1.125;
 }
-.node.node--view-mode-teaser p.field--name-field-description{
+.node.node--view-mode-teaser p.field--name-field-description,
+.taxonomy_term--view-mode-teaser p.field--name-field-description{
 	max-height: 7.5em;
 	overflow: hidden;
 	font-size: 1.1667em;
