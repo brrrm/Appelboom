@@ -285,6 +285,7 @@
 	background-size: contain;
 }
 .node.node--type-person.node--view-mode-teaser ul.links a.email,
+.node.node--type-person.node--view-mode-teaser ul.links a.phone,
 .node.node--type-person.node--view-mode-teaser ul.links a.linkedin{
 	width: 1.5em;
 	height: 1.5em;
@@ -292,6 +293,9 @@
 	display: block;
 	background: transparent url(../../images/mail.svg) center no-repeat;
 	background-size: contain;
+}
+.node.node--type-person.node--view-mode-teaser ul.links a.phone{
+	background-image: url(../../images/phone.svg);
 }
 .node.node--type-person.node--view-mode-teaser ul.links a.linkedin{
 	background-image: url(../../images/linkedin.svg);

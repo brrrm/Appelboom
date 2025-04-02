@@ -9,6 +9,7 @@ function appelblocks_node_links_alter(array &$links, NodeInterface $entity, arra
 	if($entity->bundle() == 'person' && $context['view_mode'] == 'teaser'){
 		
 		$email = $entity->get('field_person__email')->isEmpty()? NULL : $entity->get('field_person__email')->value;
+		$phone = $entity->get('field_person__phone_number')->isEmpty()? NULL : $entity->get('field_person__phone_number')->value;
 		$linkedin = $entity->get('field_linkedin')->isEmpty()? NULL : $entity->get('field_linkedin')->first()->getUrl();
 
 		$appellinks = [
@@ -30,6 +31,16 @@ function appelblocks_node_links_alter(array &$links, NodeInterface $entity, arra
 						'class'		=> ['email']
 					]
 				];
+		}
+		if(isset($linkedin)){
+					$appellinks['#links']['phone'] = [
+						'title'		=> 'Phone',
+						'url'		=> Url::fromUri('tel:' . $phone),
+						'attributes'	=> [
+							'class'		=> ['phone'],
+							'rel'		=> 'nofollow'
+						]
+					];
 		}
 		if(isset($linkedin)){
 					$appellinks['#links']['linkedin'] = [

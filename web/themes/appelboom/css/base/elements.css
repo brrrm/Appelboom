@@ -60,3 +60,8 @@ figure.media--type-image img{
 	height: 100%;
 	object-fit: cover;
 }
+figcaption{
+	margin: 0.5em 0;
+	font-size: 1rem;
+	font-style: italic;
+}
