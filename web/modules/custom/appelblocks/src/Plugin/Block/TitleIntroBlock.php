@@ -125,6 +125,8 @@ class TitleIntroBlock extends BlockBase implements ContainerFactoryPluginInterfa
 			]
 		];
 
+		$return['#attributes']['class'][] = 'node-type-' . $entity->bundle();
+
 		return $return;
 
 	}

@@ -308,6 +308,16 @@ h1#header-page-title{
 		width: auto;
 		margin: 0 calc(-1 * var(--gutter)) 3em;
 	}
+	.titlesubtitleandintroforappelboom .field--name-field-icon{
+		float: right;
+		width: 5em;
+		margin: 0 0 0 var(--gutter);
+	}
+	.titlesubtitleandintroforappelboom .field--name-field-featured-image
+	.titlesubtitleandintroforappelboom .field--name-field-description{
+		font-size: 1.5em;
+		line-height: 1.7em;
+	}
 }
 
 
@@ -399,6 +409,22 @@ h1#header-page-title{
     font-style: italic;
     margin: 0.9em 0;
     line-height: 1.5;
+}
+@media all and (max-width: 960px){
+	#block-appelboom-headerblockforpersonsforappelboom{
+		margin-bottom: 2em;
+	}
+	#block-appelboom-headerblockforpersonsforappelboom .left,
+	#block-appelboom-headerblockforpersonsforappelboom .right,
+	#block-appelboom-headerblockforpersonsforappelboom .field--name-field-description{
+		padding-left: var(--gutter);
+		padding-right: var(--gutter);
+
+	}
+	#block-appelboom-headerblockforpersonsforappelboom .field--name-field-description{
+		font-size: 1.5em;
+		line-height: 1.7em;
+	}
 }
 
 
