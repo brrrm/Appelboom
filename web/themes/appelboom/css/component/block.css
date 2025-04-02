@@ -83,6 +83,32 @@ h1#header-page-title{
 	margin: 1em 0;
 	padding: 0;
 }
+@media all and (max-width: 960px){
+	#block-appelboom-featuredimageforappelboom{
+		display: block;
+		height: auto;
+		min-height: unset;
+		margin: 0 0 3em;
+	}
+	#block-appelboom-featuredimageforappelboom .main{
+		min-height: unset;
+		display: block;
+	}
+	#block-appelboom-featuredimageforappelboom .main .media{
+		position: relative;
+		height: 55vh;
+	}
+	#block-appelboom-featuredimageforappelboom .main .title-subtitle{
+		position: absolute;
+		bottom: 0;
+		top: unset;
+		margin: 2em var(--gutter);
+	}
+	#block-appelboom-featuredimageforappelboom .sidebar{
+		padding: 0;
+		margin: 0 var(--gutter);
+	}
+}
 
 
 /**

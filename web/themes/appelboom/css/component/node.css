@@ -42,7 +42,7 @@
 		float: none;
 		max-width: unset;
 		width: auto;
-		margin: 2em calc(-0.5* var(--gutter));
+		margin: 0 calc(-0.5* var(--gutter));
 	}
 	.node.node--view-mode-full .field-content > .align-right:after,
 	.taxonomy_term.taxonomy_term--view-mode-full .field--name-description > .align-right:after{
