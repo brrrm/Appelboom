@@ -52,7 +52,7 @@ class FeaturedImageBlock extends BlockBase{
 			$title['#suffix'] = sprintf('<p class="subtitle"><em>%s</em></p></div>', $subtitle);
 		}
 
-		if($node->hasField('field_services') && !$node->get('field_services')->isEmpty()){
+		if($node->hasField('field_tags') && !$node->get('field_tags')->isEmpty()){
 			$display_options = [
 				'label' => 'above',
 				'type' => 'entity_reference_entity_view',
@@ -60,7 +60,7 @@ class FeaturedImageBlock extends BlockBase{
 					'view_mode' => 'icon_link',
 				],
 			];
-			$services = $node->get('field_services')->view($display_options);
+			$services = $node->get('field_tags')->view($display_options);
 		}
 
 		if($node->hasField('field_lead_consultant') && !$node->get('field_lead_consultant')->isEmpty()){

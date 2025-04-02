@@ -2,6 +2,7 @@
 	color: var(--appelboom-red);
 	line-height: 1;
 }
+
 h1#header-page-title{
 	margin: 0;
 	font-weight: 600;
@@ -47,6 +48,7 @@ h1#header-page-title{
 	margin: 2em 2em 2em calc(( (100% * (5/3)) - var(--page-width)) / 2);
 	line-height: 1;
 	text-shadow: 2px 2px 7px rgba(0,0,0,0.4);
+	color: #fff;
 }
 #block-appelboom-featuredimageforappelboom .main .media{
 	position: absolute;
