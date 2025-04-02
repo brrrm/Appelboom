@@ -220,6 +220,14 @@ h1#header-page-title{
 	gap: 2em;
 	padding-left: calc((100% - var(--page-width)) / 2);
 	scroll-snap-type: x mandatory;
+	scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none;  /* IE 10+ */
+}
+#block-appelboom-views-block-case-studies-related .view-rows::-webkit-scrollbar ,
+#block-appelboom-views-block-case-studies-block-2 .view-rows::-webkit-scrollbar ,
+#block-appelboom-views-block-case-studies-block-3 .view-rows::-webkit-scrollbar {
+  background: transparent; /* Chrome/Safari/Webkit */
+  width: 0px;
 }
 #block-appelboom-views-block-case-studies-related .view-rows .views-row,
 #block-appelboom-views-block-case-studies-block-2 .view-rows .views-row,
