@@ -231,6 +231,11 @@
 	margin: 0;
 	padding: 0 1rem 0;
 	bottom: 2rem;
+	text-shadow: -1px -1px 3px rgba(0,0,0,0.1), 1px 1px 3px rgba(0,0,0,0.3);
+}
+.node--type-case-study.node--view-mode-card h2 a:link,
+.node--type-case-study.node--view-mode-card h2 a:visited{
+	color: #fff;
 }
 .node--type-case-study.node--view-mode-card .field--name-field-featured-image{
 }
