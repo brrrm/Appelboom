@@ -54,14 +54,17 @@ h1#header-page-title{
 	position: absolute;
 	top: 0;
 	width: 100%;
+	height: 100%;
 	display: block;
 }
+#block-appelboom-featuredimageforappelboom .main .media div,
 #block-appelboom-featuredimageforappelboom .main .media a{
 	display: block;
+	height: 100%;
 }
 #block-appelboom-featuredimageforappelboom .main .media img{
 	display: block;
-	min-height: 120vh;
+	height: 100%;
 	width: 100%;
 	object-fit: cover;
 }

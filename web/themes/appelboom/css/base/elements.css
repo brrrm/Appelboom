@@ -58,6 +58,8 @@ figure.media--type-image{
 figure.media--type-image div,
 figure.media--type-image img{
 	height: 100%;
+}
+figure.media--type-image img{
 	object-fit: cover;
 }
 figcaption{

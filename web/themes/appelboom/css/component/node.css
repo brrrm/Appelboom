@@ -16,8 +16,20 @@
 	clear: both;
 	max-width: calc(6 * var(--column-width) - (var(--column-gap) / 2));
 	margin-inline-end: calc(-100% - var(--column-gap));
+	margin-bottom: 2em;
 	position: sticky;
 	top: 5em;
+	background: var(--bg);
+}
+.node.node--view-mode-full .field-content > .align-right:after,
+.taxonomy_term.taxonomy_term--view-mode-full .field--name-description > .align-right:after{
+	content: " ";
+	position: absolute;
+	top: auto;
+	left: 0;
+	width: 100%;
+	height: 5em;
+	background: var(--bg);
 }
 @media all and (max-width: 960px){
 	.node.node--view-mode-full,
@@ -31,6 +43,15 @@
 		max-width: unset;
 		width: auto;
 		margin: 2em calc(-0.5* var(--gutter));
+	}
+	.node.node--view-mode-full .field-content > .align-right:after,
+	.taxonomy_term.taxonomy_term--view-mode-full .field--name-description > .align-right:after{
+		content: unset;
+	}
+	.node.node--view-mode-full .field-content > .align-right figcaption,
+	.taxonomy_term.taxonomy_term--view-mode-full .field--name-description > .align-right figcaption{
+		padding: 0.5em calc(0.5 * var(--gutter));
+		display: block;
 	}
 }
 .node.node--view-mode-full .field-content{
