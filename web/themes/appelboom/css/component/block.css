@@ -432,7 +432,7 @@ h1#header-page-title{
 	font-size: 1.333em;
 	padding: 0.5em 1em;
 }
-#block-appelboom-headerblockforhomepageforappelboom .header-services .node{
+#block-appelboom-headerblockforhomepageforappelboom .header-services .taxonomy_term{
 	flex: 12em 0 1;
 	font-size: 1.5em;
 	font-weight: 500;
@@ -458,7 +458,7 @@ h1#header-page-title{
 		display: block;
 		margin-top: 2em;
 	}
-	#block-appelboom-headerblockforhomepageforappelboom .header-services .node{
+	#block-appelboom-headerblockforhomepageforappelboom .header-services .taxonomy_term{
 		margin: 1em 0;
 	}
 }
