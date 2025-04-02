@@ -111,7 +111,7 @@ class HomepageHeaderBlock extends BlockBase implements ContainerFactoryPluginInt
 			'nodes'		=> []
 		];
 		$services_nids = \Drupal::entityQuery('taxonomy_term')
-		  ->condition('type','services')
+		  ->condition('vid','services')
 		  ->accessCheck(TRUE)
 		  ->range(0,5)
 		  ->execute();
