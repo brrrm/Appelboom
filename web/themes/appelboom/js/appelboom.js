@@ -27,10 +27,10 @@
   	// add rows with divs
   	let width = $el.width();
   	let height = $el.height();
-  	let cellWidth = 100;
-  	let cellHeight = 30;
-  	let cellColumnCount = Math.floor(width / cellWidth);
-  	let cellRowCount = Math.floor(height / cellHeight);
+  	let cellWidth = 80;
+  	let cellHeight = 24;
+  	let cellColumnCount = Math.floor(width / (cellWidth - 1));
+  	let cellRowCount = Math.floor(height / (cellHeight) );
   	let Cells = $('<span class="cells" />');
 
   	for (let j = 0; j <= cellRowCount; j++){

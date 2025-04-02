@@ -46,8 +46,10 @@ html{
 	overflow: hidden;
 }
 .cells .cell{
-	flex: 100px 1 1;
-	height: 30px;
+	--cellWidth: 80px;
+	--cellHeight: 24px;
+	flex: var(--cellWidth) 1 1;
+	height: var(--cellHeight);
 	border: 1px solid rgba(255, 255, 255, 0.2);
 	box-shadow: 0 0 0px rgba(255, 255, 255, 0);
 	background: rgba(0,0,0,0.2);
@@ -56,7 +58,16 @@ html{
 }
 .cells .cell:hover{
 	border-color: rgba(255, 255, 255, 1);
-	box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+	box-shadow: 0 0 6px rgba(255, 255, 255, 0.8), 
+	var(--cellWidth) 0 var(--cellWidth) rgba(255, 255, 255, 0.2), 
+	calc(-1 * var(--cellWidth)) 0 var(--cellWidth) rgba(255, 255, 255, 0.2), 
+	0px var(--cellHeight) var(--cellWidth) rgba(255, 255, 255, 0.2), 
+	0px calc(-1 * var(--cellHeight)) var(--cellWidth) rgba(255, 255, 255, 0.2),
+	calc(2 * var(--cellWidth)) 0 var(--cellWidth) rgba(255, 255, 255, 0.1), 
+	calc(-2 * var(--cellWidth)) 0 var(--cellWidth) rgba(255, 255, 255, 0.1), 
+	0px calc(2 * var(--cellHeight)) var(--cellWidth) rgba(255, 255, 255, 0.1), 
+	0px calc(-2 * var(--cellHeight)) var(--cellWidth) rgba(255, 255, 255, 0.1);
+
 	background: rgba(0,0,0,0);
 	transition: all 0.3s 0s ease-out;
 }
