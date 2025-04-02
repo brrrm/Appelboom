@@ -114,8 +114,8 @@ class TitleIntroBlock extends BlockBase implements ContainerFactoryPluginInterfa
 
 		$return =  [
 			'image'	=> $image ?? NULL,
-			'title'	=> $title,
-			'intro'	=> $intro,
+			'title'	=> $title ?? NULL,
+			'intro'	=> $intro ?? NULL,
 			'#attributes'	=> [
 				'class'		=> ['clearfix', 'titlesubtitleandintroforappelboom']
 			],
