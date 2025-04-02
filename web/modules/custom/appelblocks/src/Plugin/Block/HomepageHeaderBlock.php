@@ -110,14 +110,14 @@ class HomepageHeaderBlock extends BlockBase implements ContainerFactoryPluginInt
 			],
 			'nodes'		=> []
 		];
-		$services_nids = \Drupal::entityQuery('node')
-		  ->condition('type','service')
+		$services_nids = \Drupal::entityQuery('taxonomy_term')
+		  ->condition('type','services')
 		  ->accessCheck(TRUE)
 		  ->range(0,5)
 		  ->execute();
-		$services_nodes = $this->entityTypeManager->getStorage('node')->loadMultiple($services_nids);
+		$services_nodes = $this->entityTypeManager->getStorage('taxonomy_term')->loadMultiple($services_nids);
 		foreach ($services_nodes as $key => $service_node) {
-			$services['nodes'][] = $this->entityTypeManager->getViewBuilder('node')->view($service_node, 'icon_link');
+			$services['nodes'][] = $this->entityTypeManager->getViewBuilder('taxonomy_term')->view($service_node, 'icon_link');
 		}
 
 		if($node->hasField('field_description') && !$node->get('field_description')->isEmpty()){
