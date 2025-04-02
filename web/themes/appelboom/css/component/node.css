@@ -51,13 +51,15 @@
 	padding-right: 0.3em;
 }
 
-.node.node--view-mode-icon-link{
+.node.node--view-mode-icon-link,
+.taxonomy_term.taxonomy_term--view-mode-icon-link{
 	display: block;
 	margin: 0;
 	padding: 0;
 }
 
-.node.node--view-mode-icon-link > a[rel="bookmark"]{
+.node.node--view-mode-icon-link > a[rel="bookmark"],
+.taxonomy_term.taxonomy_term--view-mode-icon-link > a[rel="bookmark"]{
 	display: flex;
 	flex-wrap: nowrap;
 	align-items: center;
@@ -67,7 +69,8 @@
 .node.node--view-mode-icon-link.node--type-person > a[rel="bookmark"]:hover .field--name-field-person__role-job-title{
 	background: var(--appelboom-red-1pct);
 }
-.node.node--view-mode-icon-link > a[rel="bookmark"] .field--name-field-icon{
+.node.node--view-mode-icon-link > a[rel="bookmark"] .field--name-field-icon,
+.taxonomy_term.taxonomy_term--view-mode-icon-link > a[rel="bookmark"] .field--name-field-icon{
 	flex: 2em 0 0;
 }
 .node.node--view-mode-icon-link > a[rel="bookmark"] .field--name-field-portrait{
@@ -78,7 +81,8 @@
 	border: 6px solid #ccc ;
 	border-radius: 50%;
 }
-.node.node--view-mode-icon-link > a[rel="bookmark"] > *:last-child{
+.node.node--view-mode-icon-link > a[rel="bookmark"] > *:last-child,
+.taxonomy_term.taxonomy_term--view-mode-icon-link > a[rel="bookmark"]  > *:last-child{
 	flex: auto 1 1;
 }
 .node.node--view-mode-icon-link.node--type-person > a[rel="bookmark"]{
