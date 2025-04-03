@@ -42,12 +42,6 @@
   	// CSS: idle animation??
 
   	Cells.appendTo($el);
-  	$('body').on('mouseenter', '.cell', function(){
-  		$(this).addClass('hover');
-  	});
-  	$('body').on('mouseleave', '.cell', function(){
-  		$(this).removeClass('hover');
-  	});
   }
 
 }) (jQuery, Drupal, drupalSettings);
