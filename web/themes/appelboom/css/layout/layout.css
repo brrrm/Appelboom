@@ -12,6 +12,14 @@ footer[role="contentinfo"] .region-footer{
 	margin-left: auto;
 	margin-right: auto;
 }
+@media all and (max-width: 1232px) and (min-width: 960px){
+	.region-content > #block-appelboom-primary-local-tasks,
+	.region-content > #block-appelboom-content,
+	footer[role="contentinfo"] .region-footer{
+		padding: 0 var(--gutter);
+	}
+}
+
 .region-content #block-appelboom-content .node .field-content{
 
 }
