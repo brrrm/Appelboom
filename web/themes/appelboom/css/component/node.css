@@ -71,6 +71,8 @@
 .node.node--view-mode-full .field-content > p:first-child::first-letter,
 .taxonomy_term.taxonomy_term--view-mode-full .field--name-description > p:first-child::first-letter{
 	initial-letter: 3;
+	-webkit-initial-letter: 3;
+	font-family: "jali-latin-variable", Arial Black, Arial, Helvetica, sans-serif;
 	color: var(--appelboom-red);
 	font-weight: 900;
 	padding-right: 0.3em;

@@ -1,6 +1,6 @@
 html{
 	color: var(--appelboom-body);
-	font-family: jali-latin-variable, sans-serif;
+	font-family: "jali-latin-variable", sans-serif;
 	font-weight: 300;
 	font-size: 112.5%;
 	-ms-text-size-adjust: 100%;     /* 2 */
