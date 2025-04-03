@@ -22,6 +22,9 @@ h1#header-page-title{
 	.title-subtitle{
 		margin-top: 3em;
 	}
+	h1#header-page-title{
+		font-size: 2em;
+	}
 }
 
 #block-appelboom-featuredimageforappelboom{
@@ -310,11 +313,11 @@ h1#header-page-title{
 		margin: 0 calc(-1 * var(--gutter)) 3em;
 	}
 	.titlesubtitleandintroforappelboom .field--name-field-icon{
-		float: right;
+		float: none;
+		display: block;
 		width: 5em;
-		margin: 0 0 0 var(--gutter);
+		margin: var(--gutter) auto;
 	}
-	.titlesubtitleandintroforappelboom .field--name-field-featured-image
 	.titlesubtitleandintroforappelboom .field--name-field-description{
 		font-size: 1.5em;
 		line-height: 1.7em;
