@@ -96,8 +96,15 @@ class HomepageHeaderBlock extends BlockBase implements ContainerFactoryPluginInt
 
 		$config = $this->getConfiguration();
 		$link_node_id = $config['node_id'] ?? NULL;
+		$url = $config['link'] ?? NULL;
 		if($link_node_id){
 			$title['link'] = Link::createFromRoute('Lees hoe wij dat doen', 'entity.node.canonical', ['node' => $link_node_id])->toRenderable();
+			$title['link']['#prefix'] = '<p class="homepage-link"><i class="arrow" />';
+			$title['link']['#suffix'] = '</p>';
+		}
+
+		if($link = $config['link'] ?? FALSE){
+			$title['link']['#markup'] = '<a href="'.$link.'">Lees hoe wij dat doen</a>';
 			$title['link']['#prefix'] = '<p class="homepage-link"><i class="arrow" />';
 			$title['link']['#suffix'] = '</p>';
 		}
@@ -165,6 +172,12 @@ class HomepageHeaderBlock extends BlockBase implements ContainerFactoryPluginInt
 			'#description' => $this->t('Select a media item to display in this block.'),
 		];
 
+		$form['link'] = [
+			'#type'		=> 'url',
+			'#title'	=> 'link',
+			//'#pattern'	=> '*.appelboomconsultancy.nl',
+		];
+
 		return $form;
 	}
 
@@ -175,5 +188,6 @@ class HomepageHeaderBlock extends BlockBase implements ContainerFactoryPluginInt
 		$values = $form_state->getValues();
 
 		$this->configuration['node_id'] = $values['node_id'];
+		$this->configuration['link'] = $values['link'];
 	}
 }
