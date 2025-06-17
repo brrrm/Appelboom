@@ -112,30 +112,10 @@ class TitleIntroBlock extends BlockBase implements ContainerFactoryPluginInterfa
 			$intro = $entity->get('field_description')->view($display_options);
 		}
 
-		$services = [
-			'#prefix'	=> '<aside class="header-services">',
-			'#suffix'	=> '</aside>',
-			'title'		=> [
-				'#markup'	=> '<h2>Appelboom Consultancy levert experts in:</h2>'
-			],
-			'nodes'		=> []
-		];
-		$services_nids = \Drupal::entityQuery('taxonomy_term')
-			->condition('vid','services')
-			->sort('weight', 'ASC')
-			->accessCheck(TRUE)
-			->range(0,5)
-			->execute();
-		$services_nodes = $this->entityTypeManager->getStorage('taxonomy_term')->loadMultiple($services_nids);
-		foreach ($services_nodes as $key => $service_node) {
-			$services['nodes'][] = $this->entityTypeManager->getViewBuilder('taxonomy_term')->view($service_node, 'icon_link');
-		}
-
 		$return =  [
 			'image'	=> $image ?? NULL,
 			'title'	=> $title ?? NULL,
 			'intro'	=> $intro ?? NULL,
-			'services'		=> $services,
 			'#attributes'	=> [
 				'class'		=> ['clearfix', 'titlesubtitleandintroforappelboom', 'block']
 			],
