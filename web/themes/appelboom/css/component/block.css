@@ -523,9 +523,10 @@ h1#header-page-title{
 	}
 }
 
-#block-appelboom-servicesbyappelboom{
-	margin-top: -2em;
+.block.servicesbyappelboom{
 	margin-bottom: 4em;
 	padding: 0 2em;
 }
-
+.titlesubtitleandintroforappelboom + .block.servicesbyappelboom{
+	margin-top: -2em;
+}

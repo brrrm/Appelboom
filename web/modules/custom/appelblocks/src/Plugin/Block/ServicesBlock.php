@@ -82,7 +82,7 @@ class ServicesBlock extends BlockBase implements ContainerFactoryPluginInterface
 		$return =  [
 			'services'		=> $services,
 			'#attributes'	=> [
-				'class'		=> ['clearfix', 'block']
+				'class'		=> ['clearfix', 'block', 'servicesbyappelboom']
 			],
 			'#cache' => [
 				'tags' => $cache_tags
