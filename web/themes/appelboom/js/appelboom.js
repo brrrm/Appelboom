@@ -9,9 +9,13 @@
 	Drupal.behaviors.appelboom = {
 		attach (context, settings) {
 
-			$(document).on('click', '#hamburger', function(e){
-				e.preventDefault();
-				$('body').toggleClass('show-nav');
+			const hamburger = once('navProcessed', '#hamburger', context);
+			hamburger.forEach(function(el){
+
+				$(el).on('click', function(e){
+					e.preventDefault();
+					$('body').toggleClass('show-nav');
+				});
 			});
 
 			$('.homepage-header-image .field--name-field-featured-image:not(.excelatored)').each(function(){
