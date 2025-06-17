@@ -27,30 +27,29 @@ class FeaturedImageBlock extends BlockBase{
 		}
 
 		$cache_tags = $node->getCacheTags();
-
 		$title = NULL;
 		
 		if($node->hasField('field_featured_image') && !$node->get('field_featured_image')->isEmpty()){
-			$media = $node->get('field_featured_image')->entity;
-			$image = \Drupal::entityTypeManager()->getViewBuilder('media')->view($media, 'header');
-			$request = \Drupal::request();
-			$route_match = \Drupal::routeMatch();
-			$title = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
-			$title = [
-				'#prefix'	=> '<div class="title-subtitle">',
-				'#markup'	=> sprintf('<h1 id="header-page-title" class="page__title title">%s</h1>', $title),
-				'#suffix'	=> '</div>',
-			];
+			$image = $node->get('field_featured_image')->view([
+				'label'		=> 'hidden',
+				'type'		=> 'media_thumbnail',
+				'settings'	=> [
+					'image_style'	=> '16_9_1800x1080_focal_point_webp'
+				]
+			]);
 		}
 
-		if($node->hasField('field_subtitle') && !$node->get('field_subtitle')->isEmpty()){
-			$display_options = [
-				'label' => 'hidden',
-				'type' => 'string',
-			];
-			$subtitle = $node->get('field_subtitle')->value;
-			$title['#suffix'] = sprintf('<p class="subtitle"><em>%s</em></p></div>', $subtitle);
-		}
+		$request = \Drupal::request();
+		$route_match = \Drupal::routeMatch();
+		$title = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
+		$subtitle = $node->get('field_subtitle')->value ?? '';
+		$title = [
+			'#prefix'	=> '<div class="title-subtitle">',
+			'title'		=> [
+				'#markup'	=> sprintf('<h1 id="header-page-title" class="page__title title">%s <span class="inner-subtitle">%s</span></h1>', $title, $subtitle),
+			],
+			'#suffix'	=> '</div>',
+		];
 
 		if($node->hasField('field_tags') && !$node->get('field_tags')->isEmpty()){
 			$display_options = [
@@ -86,8 +85,8 @@ class FeaturedImageBlock extends BlockBase{
 			'main'			=> [
 				'#prefix'		=> '<div class="main">',
 				'#suffix'		=> '</div>',
-				'title'			=> $title,
 				'image'			=> $image ?? null,
+				'title'			=> $title,
 			],
 			'#attributes'	=>	[
 				'class'			=> ['node-type-'.$node->bundle()]

@@ -20,7 +20,7 @@
 			$('.field--name-description .media:not(.excelatored)').each(function(){
 				excelator($(this));
 			});
-			$('.node-type-case_study .field--name-field-media-image .field__item:not(.excelatored)').each(function(){
+			$('#block-appelboom-featuredimageforappelboom .field--name-field-featured-image:not(.excelatored)').each(function(){
 				excelator($(this));
 			});
 
