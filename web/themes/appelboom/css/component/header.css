@@ -54,6 +54,7 @@ button#hamburger{
 }
 #block-appelboom-main-menu > ul ul li{
 	margin: 0 0 0.5em;
+	min-width: max-content;
 }
 #block-appelboom-main-menu > ul li:hover > ul{
 	left: auto;
