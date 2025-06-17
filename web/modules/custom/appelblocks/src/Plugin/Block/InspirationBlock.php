@@ -152,8 +152,6 @@ class InspirationBlock extends BlockBase implements ContainerFactoryPluginInterf
 		}
 
 		$this->configuration['node_id'] = $values['node_id'];
-		$this->configuration['inspiration_text'] = $values['inspiration_text'];
-		$this->configuration['image'] = $values['image'];
 	}
 
 }
