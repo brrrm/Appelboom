@@ -17,9 +17,6 @@
 			$('.homepage-header-image .field--name-field-featured-image:not(.excelatored)').each(function(){
 				excelator($(this));
 			});
-			$('.field--name-description .media:not(.excelatored)').each(function(){
-				excelator($(this));
-			});
 			$('#block-appelboom-featuredimageforappelboom .field--name-field-featured-image:not(.excelatored)').each(function(){
 				excelator($(this));
 			});
