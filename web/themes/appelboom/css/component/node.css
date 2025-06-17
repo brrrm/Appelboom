@@ -44,6 +44,10 @@
 		width: auto;
 		margin: 0 calc(-0.5* var(--gutter)) 1em;
 	}
+	.node.node--view-mode-full .field-content > .align-right img,
+	.taxonomy_term.taxonomy_term--view-mode-full .field--name-description > .align-right img{
+		width: 100%;
+	}
 	.node.node--view-mode-full .field-content > .align-right:has(figcaption),
 	.taxonomy_term.taxonomy_term--view-mode-full .field--name-description > .align-right:has(figcaption){
 		margin-bottom: 0;

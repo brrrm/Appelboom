@@ -146,6 +146,9 @@ class HomepageHeaderBlock extends BlockBase implements ContainerFactoryPluginInt
 			],
 			'services'		=> $services,
 			'intro'			=> $intro ?? NULL,
+			'#attributes'	=> [
+				'class'		=> ['block']
+			],
 			'#cache' => [
 				'tags' => $cache_tags,
 				'contexts' => ['url.path']
