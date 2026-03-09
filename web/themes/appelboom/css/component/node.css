@@ -1,5 +1,6 @@
-.node.node--view-mode-full,
-.taxonomy_term.taxonomy_term--view-mode-full{
+/* gebruik ::has(p) om lege divs geen grid layout te geven */
+.node.node--view-mode-full:has(p),
+.taxonomy_term.taxonomy_term--view-mode-full:has(p){
 	display: grid;
 	grid-template-columns: repeat(var(--column-count), minmax(0, 1fr));
 	column-gap: var(--column-gap);

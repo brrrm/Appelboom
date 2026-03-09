@@ -183,7 +183,7 @@ h1#header-page-title{
 
 .titlesubtitleandintroforappelboom{
 	max-width: var(--page-width);
-	margin: 6.667em auto 5em;
+	margin: 6.667em auto 3em;
 	line-height: 3em;
 }
 .titlesubtitleandintroforappelboom > .field--name-field-featured-image,
@@ -195,9 +195,14 @@ h1#header-page-title{
 .titlesubtitleandintroforappelboom > .field--type-entity-reference{
 	width: 20em;
 	margin-top: 0;
+
+	&.field--name-field-icon{
+		width: 15em;
+	}
 }
 .titlesubtitleandintroforappelboom h1{
 	font-size: 3.333em;
+	line-height: 1em;
 	color: var(--appelboom-red);
 	margin: 0;
 }
@@ -209,7 +214,8 @@ h1#header-page-title{
 	margin: 0.2em 0 0;
 }
 .titlesubtitleandintroforappelboom .field--name-field-description{
-	font-size: 2em;
+	font-size: 1.667em;
+	line-height: 1.5;
 	font-weight: 300;
 	font-style: italic;
 	margin: 0.9em 0;
@@ -244,7 +250,7 @@ h1#header-page-title{
 #block-appelboom-views-block-diensten-taxo-block-1,
 #block-appelboom-views-block-person-profiles-all{
 	max-width: var(--page-width);
-	margin: 5em auto;
+	margin: 2em auto 5em auto;
 }
 #block-appelboom-views-block-diensten-block-1 .item-list ul,
 #block-appelboom-views-block-diensten-taxo-block-1 .item-list ul,
@@ -387,7 +393,7 @@ h1#header-page-title{
 }
 #block-appelboom-headerblockforhomepageforappelboom .homepage-header-image,
 #block-appelboom-featuredimageforappelboom .main{
-	height: 70vh;
+	height: 50vh;
 	width: 100%;
 	position: relative;
 }
@@ -524,7 +530,7 @@ h1#header-page-title{
 }
 
 .block.servicesbyappelboom{
-	margin-bottom: 4em;
+	margin-bottom: 0em;
 	padding: 0 2em;
 }
 .titlesubtitleandintroforappelboom + .block.servicesbyappelboom{

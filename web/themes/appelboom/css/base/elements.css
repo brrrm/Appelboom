@@ -7,6 +7,10 @@ h2{
 	font-weight: 600;
 	margin: 1rem 0;
 	color: var(--appelboom-red);
+
+	strong{
+		font-weight: inherit;
+	}
 }
 h3{
 	font-size: 1.333em;

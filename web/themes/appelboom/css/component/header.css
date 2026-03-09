@@ -1,8 +1,13 @@
 header#page-header{
 	border-bottom: 1px solid var(--appelboom-red-10pct);
 	padding: 1.25em 0;
-	position: relative;
+	position: sticky;
+	top: 0;
 	z-index: 100;
+	transition: padding 0.3s ease;
+	&.minify{
+		padding: 0.3em 0 0 0;
+	}
 }
 header#page-header .region-header{
 	max-width: var(--page-width);

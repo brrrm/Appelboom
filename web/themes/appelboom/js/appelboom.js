@@ -25,6 +25,17 @@
 				excelator($(this));
 			});
 
+			const headerOnce = once('headerProcessed', '#page-header', context);
+			headerOnce.forEach(function(el){
+				$(window).on('scroll', function(e){
+					if($(window).scrollTop() > $('#page-header').height()){
+						$('#page-header').addClass('minify');
+					}else{
+						$('#page-header').removeClass('minify');
+					}
+				})
+			});
+
 		}
 	};
 
