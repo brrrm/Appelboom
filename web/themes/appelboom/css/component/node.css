@@ -6,7 +6,9 @@
 	column-gap: var(--column-gap);
 }
 .node.node--view-mode-full .field-content,
-.taxonomy_term.taxonomy_term--view-mode-full .field--name-description{
+.taxonomy_term.taxonomy_term--view-mode-full .field--name-description,
+p.solliciteren,
+footer.published-date{
 	grid-column: 1 / 7;
 	font-size: 1.1667em;
 	line-height: 1.5;
@@ -369,5 +371,24 @@
 	}
 }
 
+
+footer.published-date{
+	font-size: 0.8em;
+	margin: 0 0 1rem 0;
+}
+.node--view-mode-teaser footer.published-date{
+	margin-top: -1rem;
+}
+
+p.solliciteren:before{
+		content: " ";
+		display: inline-block;
+		width: 4rem;
+		height: 2rem;
+		background: transparent url(../../images/pijl.svg) left no-repeat;
+		background-size: contain;
+		vertical-align: middle;
+		padding: 0 1em 0 0;
+	}
 
 

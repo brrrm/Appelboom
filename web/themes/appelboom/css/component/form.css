@@ -1,0 +1,74 @@
+.webform-submission-form{
+	.form-item{
+		display: flex;
+		flex-wrap: wrap;
+		margin: 1.5em 0;
+		align-items: center;
+
+		label{
+			flex: 10em 0 0;
+		}
+		input{
+			flex: auto 1 1;
+			height: 3rem;
+			font-size: 1.333em;
+			padding: 0 .5em;
+			font-style: italic;
+			font-family: jali-latin-variable;
+			font-weight: 300;
+			border: 1px solid var(--appelboom-red-10pct);
+
+		}
+		.description{
+			margin-top: 0.5em;
+			padding: 0 0 0 10rem;
+			flex: 100% 0 0;
+			font-style: italic;
+			font-size: 0.8em;
+		}
+	}
+	.form-item.form-type-textarea{
+		>div{
+			flex: auto 1 1;
+			textarea{
+				width: 100%;
+				font-family: jali-latin-variable;
+				font-size: 1.333em;
+				font-weight: 300;
+				padding: 0.5em;
+				display: block;
+				border-color: var(--appelboom-red-10pct);
+			}
+		}
+	}
+
+	.form-type-checkbox{
+		gap: 1em;
+		input{
+			flex: auto 0 0;
+			width: 1em;
+			height: 1em;
+		}
+		label{
+			flex: auto 1 1;
+		}
+	}
+
+	.form-type-webform-document-file{
+		align-items: flex-start;
+		.webform-file-button{
+			color: #fff;
+		    background: var(--appelboom-red);
+		    border-radius: 2em;
+		    font-size: 1em;
+		    padding: 0.5em 1em;
+		    cursor: pointer;
+		}
+		.webform-document-file{
+			flex: auto 1 1;
+		}
+		.description{
+			margin-top: 1em;
+		}
+	}
+}

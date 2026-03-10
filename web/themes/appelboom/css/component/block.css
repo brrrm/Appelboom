@@ -248,13 +248,15 @@ h1#header-page-title{
 
 #block-appelboom-views-block-diensten-block-1,
 #block-appelboom-views-block-diensten-taxo-block-1,
-#block-appelboom-views-block-person-profiles-all{
+#block-appelboom-views-block-person-profiles-all,
+#block-appelboom-views-block-vacatures-block-1{
 	max-width: var(--page-width);
 	margin: 2em auto 5em auto;
 }
 #block-appelboom-views-block-diensten-block-1 .item-list ul,
 #block-appelboom-views-block-diensten-taxo-block-1 .item-list ul,
-#block-appelboom-views-block-person-profiles-all .item-list ul{
+#block-appelboom-views-block-person-profiles-all .item-list ul,
+#block-appelboom-views-block-vacatures-block-1 .item-list ul{
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -262,7 +264,8 @@ h1#header-page-title{
 @media all and (max-width: 960px){
 	#block-appelboom-views-block-diensten-block-1,
 	#block-appelboom-views-block-diensten-taxo-block-1,
-	#block-appelboom-views-block-person-profiles-all{
+	#block-appelboom-views-block-person-profiles-all,
+	#block-appelboom-views-block-vacatures-block-1{
 		padding: 0 var(--gutter);
 	}
 }
@@ -535,4 +538,9 @@ h1#header-page-title{
 }
 .titlesubtitleandintroforappelboom + .block.servicesbyappelboom{
 	margin-top: -2em;
+}
+
+
+#block-appelboom-views-block-vacatures-block-1 > h2{
+	font-size: 2em;
 }

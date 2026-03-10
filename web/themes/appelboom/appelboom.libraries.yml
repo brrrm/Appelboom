@@ -9,6 +9,7 @@ global:
     component:
       css/component/block.css: {}
       css/component/breadcrumb.css: {}
+      css/component/dialog.css: {weight: 500}
       css/component/field.css: {}
       css/component/form.css: {}
       css/component/header.css: {}

@@ -36,6 +36,13 @@
 				})
 			});
 
+			const solliciterenLink = once('solliciterenProcessed', 'p.solliciteren',context );
+			solliciterenLink.forEach((el) =>{
+				const title = $('h1').first().text();
+				let link = $('<a href="/form/open-sollicitatie?vacature='+title+'" class="webform-dialog webform-dialog-wide button">Direct solliciteren</a>');
+				$(el).html(link);
+			});
+
 		}
 	};
 

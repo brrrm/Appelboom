@@ -1,0 +1,58 @@
+.ui-dialog:not(.ui-dialog-off-canvas),
+.ui-dialog .ui-widget-content.ui-dialog-content,
+.ui-dialog .ui-widget-content.ui-dialog-buttonpane{
+	background: var(--bg);
+}
+.ui-dialog .ui-dialog-titlebar{
+	background: var(--appelboom-red);
+}
+.ui-dialog .ui-widget-content.ui-dialog-buttonpane{
+	border-color: var(--appelboom-red-10pct);
+}
+
+[dir="ltr"] .ui-dialog #edit-submit.form-submit, 
+[dir="ltr"] .ui-dialog .button--primary, 
+[dir="ltr"] .ui-dialog .button--primary:not(:focus), 
+[dir="ltr"] .ui-dialog .ief-entity-submit,
+
+.ui-dialog .button, 
+.ui-dialog .button:not(:focus), 
+.ui-dialog .form-actions .button, 
+.ui-dialog .project__action_button, 
+.ui-dialog .action-link--icon-trash.action-link,
+.ui-dialog .button:active, 
+.ui-dialog .button:focus, 
+.ui-dialog .button:not(:focus):active, 
+.ui-dialog .button:not(:focus):focus, 
+.ui-dialog .form-actions .button:active, 
+.ui-dialog .form-actions .button:focus, 
+.ui-dialog .project__action_button:active, 
+.ui-dialog .project__action_button:focus, 
+.ui-dialog .action-link--icon-trash.action-link:active, 
+.ui-dialog .action-link--icon-trash.action-link:focus{
+	background: var(--appelboom-red);
+	border-color: var(--appelboom-red) !important;
+	border-radius: 1.5em;
+	color: #fff;
+	font-style: normal;
+    font-size: inherit;
+    padding: 0.5em 1em;
+    height: auto;
+    cursor: pointer;
+
+    &:hover{
+		background: var(--appelboom-red);
+		border-color: var(--appelboom-red) !important;
+		border-radius: 1.5em;
+		color: #fff;
+    }
+}
+
+
+.ui-dialog .button, 
+.ui-dialog .button:not(:focus), 
+.ui-dialog .form-actions .button, 
+.ui-dialog .project__action_button, 
+.ui-dialog .action-link--icon-trash.action-link{
+
+}
