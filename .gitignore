@@ -5,6 +5,7 @@
 files/
 sites/*/files
 sites/*/private
+private/
 
 # Ignore default text files
 /*/CHANGELOG.txt
