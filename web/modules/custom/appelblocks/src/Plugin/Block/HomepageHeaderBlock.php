@@ -8,7 +8,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Url;
 use Drupal\Core\Link;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Entity\EntityTypeManager;
+use Drupal\Core\Entity\EntityTypeManagerInterface;
 
 /**
  * Provides a 'featured image' block.
@@ -42,7 +42,7 @@ class HomepageHeaderBlock extends BlockBase implements ContainerFactoryPluginInt
 	* @param \Drupal\Core\Session\AccountInterface $currentUser
 	*   The current_user.
 	*/
-	public function __construct(array $configuration, $plugin_id, $plugin_definition, EntityTypeManager $entity_type_manager) {
+	public function __construct(array $configuration, $plugin_id, $plugin_definition, EntityTypeManagerInterface $entity_type_manager) {
 		parent::__construct($configuration, $plugin_id, $plugin_definition);
 		$this->entityTypeManager = $entity_type_manager;
 	}
