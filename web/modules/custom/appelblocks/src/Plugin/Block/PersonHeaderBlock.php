@@ -66,13 +66,22 @@ class PersonHeaderBlock extends BlockBase{
 		$email = $node->get('field_person__email')->isEmpty()? NULL : $node->get('field_person__email')->value;
 		$phone = $node->get('field_person__phone_number')->isEmpty()? NULL : $node->get('field_person__phone_number')->value;
 		$linkedinUrl = $node->get('field_linkedin')->isEmpty()? NULL : $node->get('field_linkedin')->first()->getUrl();
-		$linkedinUrl->setOptions([
-			'attributes' => [
-				'class' 	=> ['linkedIn-link'], 
-				'target' 	=> '_blank',
-				'rel'		=> 'nofollow'
-			] 
-		]);
+		if($linkedinUrl !== null){
+			$linkedinUrl->setOptions([
+				'attributes' => [
+					'class' 	=> ['linkedIn-link'], 
+					'target' 	=> '_blank',
+					'rel'		=> 'nofollow'
+				] 
+			]);
+		}
+
+		$links = [
+			isset($email) ? Link::fromTextAndUrl($email, Url::fromUri('mailto:' . $email, ['attributes' => ['class' => ['email-link']]] ))->toRenderable() : NULL,
+			isset($linkedinUrl) ? Link::fromTextAndUrl('linkedin', $linkedinUrl)->toRenderable() : NULL,
+			isset($phone)? Link::fromTextAndUrl($phone, Url::fromUri('tel:'.$phone, ['attributes' => ['class' => ['phone-link']]] ))->toRenderable() : NULL,
+		];
+		$links = array_filter($links, fn($value) => !is_null($value) && $value !== '');
 
 		$portrait = $node->get('field_portrait')->view([
 			'label'		=> 'hidden',
@@ -95,11 +104,7 @@ class PersonHeaderBlock extends BlockBase{
 				'#suffix'		=> '</div>',
 				'links'			=> [
 					'#theme' 	=> 'item_list',
-					'#items'	=> [
-						Link::fromTextAndUrl($email, Url::fromUri('mailto:' . $email, ['attributes' => ['class' => ['email-link']]] ))->toRenderable(),
-						Link::fromTextAndUrl('linkedin', $linkedinUrl)->toRenderable(),
-						Link::fromTextAndUrl($phone, Url::fromUri('tel:'.$phone, ['attributes' => ['class' => ['phone-link']]] ))->toRenderable(),
-					]
+					'#items'	=> $links,
 				]
 			],
 			'intro'			=> $intro ?? NULL,
