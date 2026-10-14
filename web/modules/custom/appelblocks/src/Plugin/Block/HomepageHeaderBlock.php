@@ -105,7 +105,7 @@ class HomepageHeaderBlock extends BlockBase implements ContainerFactoryPluginInt
 
 		if($link = $config['link'] ?? FALSE){
 			$title['link']['#markup'] = '<a href="'.$link.'">Lees hoe wij dat doen</a>';
-			$title['link']['#prefix'] = '<p class="homepage-link"><i class="arrow" />';
+			$title['link']['#prefix'] = '<p class="homepage-link"><i class="arrow"></i>';
 			$title['link']['#suffix'] = '</p>';
 		}
 
