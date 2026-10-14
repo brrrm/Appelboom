@@ -51,7 +51,11 @@ class PersonHeaderBlock extends BlockBase{
 		}
 		if($node->hasField('field_person__role_job_title') && !$node->get('field_person__role_job_title')->isEmpty()){
 			$subtitle = $node->get('field_person__role_job_title')->value;
-			$title['#suffix'] = sprintf('<p class="subtitle"><em>%s</em></p></div>', $subtitle);
+			$title['#suffix'] = sprintf('<p class="subtitle"><em>%s</em></p>', $subtitle);
+			
+			if($node->hasField('field_featured_image') && !$node->get('field_featured_image')->isEmpty()){
+				$title['#suffix'] .= '</div>';
+			}
 		}
 
 		if($node->hasField('field_description') && !$node->get('field_description')->isEmpty()){
